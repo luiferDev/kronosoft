@@ -1,225 +1,224 @@
-export const languages: Record<'fr' | 'en', { name: string; flag: string }> = {
-  fr: { name: 'Français', flag: 'fr' },
+export const languages: Record<'es' | 'en', { name: string; flag: string }> = {
+  es: { name: 'Español', flag: 'es' },
   en: { name: 'English', flag: 'us' },
 } as const;
 
-export const defaultLanguage = 'fr';
+export const defaultLanguage = 'es';
 
 export type LanguageCode = keyof typeof languages;
 
 export const ui = {
-  fr: {
+  es: {
     projectsContent: {
       sampleProject: {
-        title: 'Exemple de Projet',
-        description: "Ceci est un projet d'exemple pour le template.",
-        imageAltText: "Image placeholder pour le projet d'exemple",
-        categoryText: 'Application Web',
-        dateText: 'Janvier 2025',
+        title: 'Proyecto de Ejemplo',
+        description: "Este es un proyecto de ejemplo para la plantilla.",
+        imageAltText: "Imagen placeholder para el proyecto de ejemplo",
+        categoryText: 'Aplicación Web',
+        dateText: 'Enero 2025',
         detailedDescription:
-          "Une description plus détaillée de ce projet d'exemple, montrant comment structurer le contenu pour la page de détail du projet.",
+          "Una descripción más detallada de este proyecto de ejemplo, mostrando cómo estructurar el contenido para la página de detalle del proyecto.",
         keyFeatures: {
           responsiveDesign: {
-            title: 'Design Adaptatif',
-            description: "Le projet s'adapte à toutes les tailles d'écran.",
+            title: 'Diseño Responsivo',
+            description: "El proyecto se adapta a todos los tamaños de pantalla.",
           },
           contentManagement: {
-            title: 'Gestion de Contenu Facile',
+            title: 'Gestión de Contenido Fácil',
             description:
-              'Permet une gestion aisée du contenu via des fichiers Markdown ou un CMS.',
+              'Permite una gestión sencilla del contenido a través de archivos Markdown o un CMS.',
           },
         },
         galleryImages: {
-          // sampleGalleryImage1: { // Si tu actives la galerie pour l'exemple
-          //   alt: "Texte alternatif pour l'image de galerie 1",
-          //   caption: "Légende pour l'image de galerie 1",
+          // sampleGalleryImage1: { // Si activas la galería para el ejemplo
+          //   alt: "Texto alternativo para la imagen de galería 1",
+          //   caption: "Leyenda para la imagen de galería 1",
           // },
         },
         challenges:
-          'Description des défis rencontrés lors de la création de ce projet exemple.',
-        learnings: 'Description des apprentissages tirés de ce projet exemple.',
+          'Descripción de los desafíos encontrados durante la creación de este proyecto ejemplo.',
+        learnings: 'Descripción de los aprendizajes obtenidos de este proyecto ejemplo.',
       },
     },
     skillsContent: {
       frontendDevelopment: {
-        title: 'Développement Frontend',
+        title: 'Desarrollo Frontend',
         description:
-          "Création d'interfaces utilisateur interactives et performantes.",
+          "Creación de interfaces de usuario interactivas y de alto rendimiento.",
       },
       backendDevelopment: {
-        title: 'Développement Backend',
-        description: "Construction de logiques serveur robustes et d'API.",
+        title: 'Desarrollo Backend',
+        description: "Construcción de lógica de servidor robusta y APIs.",
       },
       uiUxDesign: {
-        title: 'Design UI/UX',
+        title: 'Diseño UI/UX',
         description:
-          "Conception d'expériences utilisateur intuitives et esthétiques.",
+          "Diseño de experiencias de usuario intuitivas y estéticas.",
       },
       devOps: {
         title: 'DevOps',
         description:
-          'Automatisation des processus de développement et de déploiement.',
+          'Automatización de procesos de desarrollo y despliegue.',
       },
     },
     site: {
-      title: 'Mon Super Template',
+      title: 'KronoSoft',
       description:
-        'Un template Astro moderne et performant pour démarrer votre projet.',
+        'Empresa de desarrollo de software especializada en soluciones tecnológicas innovadoras.',
     },
     nav: {
-      home: 'Accueil',
+      home: 'Inicio',
       blog: 'Blog',
-      contact: 'Contact',
-      projects: 'Projets',
-      tips: 'Astuces',
+      contact: 'Contacto',
+      projects: 'Proyectos',
+      tips: 'Consejos',
     },
     footer: {
-      rights: 'Tous droits réservés.',
+      rights: 'Todos los derechos reservados.',
     },
     homePage: {
-      pageTitle: 'Accueil |  Développeur FullStack',
+      pageTitle: 'Inicio | KronoSoft - Empresa de Software',
       pageDescription:
-        "Bienvenue sur le portfolio de YOUR_NAME, développeur FullStack passionné par la création d'expériences web innovantes.",
-      heroGreeting: "Salut, c'est YOUR_NAME",
-      heroSubtitlePart1: 'Développeur FullStack',
-      heroSubtitlePart2: 'Passionné UI/UX',
-      heroIntroduction: 'Ajouter une introduction ici.',
-      heroViewWorkButton: 'Mes réalisations',
-      heroContactButton: 'Me contacter',
+        "Bienvenido a KronoSoft, empresa de desarrollo de software especializada en crear experiencias web innovadoras y soluciones tecnológicas de vanguardia.",
+      heroGreeting: "Hola, Somos KronoSoft",
+      heroSubtitlePart1: 'Empresa de Desarrollo de Software',
+      heroSubtitlePart2: 'Especialistas en Tecnología',
+      heroIntroduction: 'En KronoSoft transformamos ideas en soluciones digitales innovadoras. Somos una empresa especializada en desarrollo de software, creación de aplicaciones web y móviles, y consultoría tecnológica.',
+      heroViewWorkButton: 'Ver Nuestro Trabajo',
+      heroContactButton: 'Contáctanos',
       heroImageAlt:
-        'Illustration représentant YOUR_NAME ou un concept de développement',
-      featuredProjectsTitle: '3 derniers projets',
+        'Ilustración representando KronoSoft o un concepto de desarrollo',
+      featuredProjectsTitle: '3 últimos proyectos',
       featuredProjectsDescription:
-        "Voici quelques projets sur lesquels j'ai récemment travaillé. N'hésitez pas à les explorer !",
-      projectCardViewProject: 'Voir le projet',
-      projectCardViewCode: 'Voir le code',
-      imageNotAvailable: 'Image bientôt disponible',
-      mySkillsTitle: 'Mes Compétences',
+        "Aquí tienes algunos de los proyectos en los que hemos trabajado recientemente. ¡No dudes en explorarlos!",
+      projectCardViewProject: 'Ver Proyecto',
+      projectCardViewCode: 'Ver Código',
+      imageNotAvailable: 'Imagen próximamente disponible',
+      mySkillsTitle: 'Nuestras Competencias',
       mySkillsDescription:
-        "Explorez l'expertise et les capacités qui définissent mon travail et ma passion.",
+        "Explora la experiencia y habilidades que definen nuestro trabajo y pasión por la tecnología.",
     },
     blogPage: {
-      pageTitle: 'Mon Blog Technique',
+      pageTitle: 'Nuestro Blog Técnico',
       pageDescription:
-        "Articles et réflexions sur le développement web, l'architecture logicielle, et les nouvelles technologies.",
-      title: 'Mon Blog Technique',
+        "Artículos y reflexiones sobre desarrollo web, arquitectura de software y nuevas tecnologías.",
+      title: 'Nuestro Blog Técnico',
       description:
-        "Articles et réflexions sur le développement web, l'architecture logicielle, et les nouvelles technologies.",
+        "Artículos y reflexiones sobre desarrollo web, arquitectura de software y nuevas tecnologías.",
       comingSoon:
-        'Les articles de blog apparaîtront ici bientôt. Revenez plus tard !',
-      heroImageAlt: "Image de couverture pour l'article : ",
-      publishedOn: 'Publié le : ',
-      readMore: 'Lire la suite',
-      readingTimeSuffix: 'min de lecture',
-      searchPlaceholder: 'Rechercher des articles...',
-      filterByTagButtonLabel: 'Filtrer par tag',
-      noTagFound: 'Aucun tag trouvé.',
-      selectTagCommandPlaceholder: 'Rechercher un tag...',
-      allTagsLabel: 'Tous les tags',
-      noPostsFound: 'Aucun article trouvé.',
+        '¡Los artículos del blog aparecerán aquí pronto. Vuelve más tarde!',
+      heroImageAlt: "Imagen de portada para el artículo: ",
+      publishedOn: 'Publicado el: ',
+      readMore: 'Leer más',
+      readingTimeSuffix: 'min de lectura',
+      searchPlaceholder: 'Buscar artículos...',
+      filterByTagButtonLabel: 'Filtrar por etiqueta',
+      noTagFound: 'No se encontró ninguna etiqueta.',
+      selectTagCommandPlaceholder: 'Buscar etiqueta...',
+      allTagsLabel: 'Todas las etiquetas',
+      noPostsFound: 'No se encontraron artículos.',
     },
     blogPost: {
-      publishedOn: 'Publié le : ',
-      updatedOn: 'Mis à jour le : ',
-      heroImageAlt: "Image de couverture pour l'article : ",
-      backToList: 'Retour à la liste des articles',
-      readingTimeSuffix: 'min de lecture',
-      relatedPostsTitle: 'Je te recommande aussi :',
-      readMore: 'Lire la suite',
-      editOnGithub: 'Proposer une modification sur GitHub',
+      publishedOn: 'Publicado el: ',
+      updatedOn: 'Actualizado el: ',
+      heroImageAlt: "Imagen de portada para el artículo: ",
+      backToList: 'Volver a la lista de artículos',
+      readingTimeSuffix: 'min de lectura',
+      relatedPostsTitle: 'Te recomendamos también:',
+      readMore: 'Leer más',
+      editOnGithub: 'Proponer una modificación en GitHub',
     },
     toc: {
-      title: "Sommaire de l'article",
+      title: "Tabla de Contenidos",
     },
     contactPage: {
-      pageTitle: 'Me Contacter',
+      pageTitle: 'Contáctanos',
       pageDescription:
-        "Discutons de ton projet, d'une collaboration potentielle, ou simplement pour échanger sur la tech !",
-      title: 'Me Contacter',
+        "¡Hablemos de tu proyecto, una colaboración potencial, o simplemente para intercambiar sobre tecnología!",
+      title: 'Contáctanos',
       description:
-        "Discutons de ton projet, d'une collaboration potentielle, ou simplement pour échanger sur la tech !",
+        "¡Hablemos de tu proyecto, una colaboración potencial, o simplemente para intercambiar sobre tecnología!",
 
-      formTitle: 'Envoyer un message',
-      firstNameLabel: 'Prénom',
-      lastNameLabel: 'Nom',
+      formTitle: 'Enviar un mensaje',
+      firstNameLabel: 'Nombre',
+      lastNameLabel: 'Apellido',
       emailLabel: 'Email',
-      messageLabel: 'Message',
-      sendButtonLabel: 'Envoyer',
-      firstNamePlaceholder: 'Ton prénom',
+      messageLabel: 'Mensaje',
+      sendButtonLabel: 'Enviar',
+      firstNamePlaceholder: 'Tu nombre',
 
-      lastNamePlaceholder: 'Ton nom de famille',
-      emailPlaceholder: 'Ton adresse e-mail',
-      messagePlaceholder: 'Ton message ici...',
-      calendarTitle: 'Planifier un RDV',
+      lastNamePlaceholder: 'Tu apellido',
+      emailPlaceholder: 'Tu dirección de email',
+      messagePlaceholder: 'Tu mensaje aquí...',
+      calendarTitle: 'Programar una Reunión',
       calendarDescription:
-        'Tu préfères discuter de vive voix ? Réservez directement un créneau dans mon agenda.',
-      calendarButtonLabel: 'Voir mes disponibilités',
-      calendarLinkLabel: 'Voir mon agenda',
+        '¿Prefieres hablar en vivo? Reserva directamente un horario en nuestra agenda.',
+      calendarButtonLabel: 'Ver nuestras disponibilidades',
+      calendarLinkLabel: 'Ver nuestra agenda',
       calendarPlaceHolder:
-        "L'intégration avec Google Calendar se fera bientôt...",
-      orSeparatorText: 'OU',
-      toastSuccessMessageSent: 'Message envoyé avec succès !',
-      toastErrorFailedToSend: "Échec de l'envoi du message.",
-      toastErrorUnexpected: "Une erreur inattendue s'est produite.",
-      toastErrorDetails: "Détails de l'erreur:",
-      toastErrorValidationFailed: 'Validation du formulaire échouée.',
+        "La integración con Google Calendar estará disponible pronto...",
+      orSeparatorText: 'O',
+      toastSuccessMessageSent: '¡Mensaje enviado con éxito!',
+      toastErrorFailedToSend: "Error al enviar el mensaje.",
+      toastErrorUnexpected: "Ocurrió un error inesperado.",
+      toastErrorDetails: "Detalles del error:",
+      toastErrorValidationFailed: 'Validación del formulario fallida.',
     },
     projectDetailPage: {
-      backToProjects: 'Retour aux Projets',
-      categoryLabel: 'Catégorie :',
-      dateLabel: 'Date :',
-      aboutTitle: 'À propos de ce projet',
-      keyFeaturesTitle: 'Fonctionnalités Clés',
-      galleryTitle: 'Galerie',
-      challengesTitle: 'Défis Rencontrés',
-      learningsTitle: 'Leçons Apprises',
-      visitProjectButton: 'Visiter le Projet',
-      viewCodeButton: 'Voir le Code',
+      backToProjects: 'Volver a Proyectos',
+      categoryLabel: 'Categoría:',
+      dateLabel: 'Fecha:',
+      aboutTitle: 'Acerca de este proyecto',
+      keyFeaturesTitle: 'Características Clave',
+      galleryTitle: 'Galería',
+      challengesTitle: 'Desafíos Encontrados',
+      learningsTitle: 'Lecciones Aprendidas',
+      visitProjectButton: 'Visitar Proyecto',
+      viewCodeButton: 'Ver Código',
     },
     projectsPage: {
-      title: 'Mes Projets',
-      metaTitle: 'Mes Projets | Portfolio',
-      metaDescription: 'Découvrez tous les projets.',
-      noProjects: 'Aucun projet à afficher pour le moment.',
+      title: 'Nuestros Proyectos',
+      metaTitle: 'Nuestros Proyectos | KronoSoft',
+      metaDescription: 'Descubre todos nuestros proyectos.',
+      noProjects: 'No hay proyectos para mostrar en este momento.',
       noProjectsDescription:
-        "Il semble que vous n'ayez pas encore de projets à afficher.",
+        "Parece que aún no tenemos proyectos para mostrar.",
     },
     notFoundPage: {
-      pageTitle: 'Page Non Trouvée',
-      title: 'Oups ! Page Non Trouvée',
+      pageTitle: 'Página No Encontrada',
+      title: '¡Ups! Página No Encontrada',
       message:
-        "Désolé, la page que vous recherchez ne semble pas exister. Vérifiez l'URL ou retournez à la page d'accueil.",
-      homeLink: "Retourner à l'Accueil",
+        "Lo sentimos, la página que buscas no parece existir. Verifica la URL o regresa a la página de inicio.",
+      homeLink: "Volver al Inicio",
     },
 
     tipsPage: {
-      metaTitle: 'Astuces de Développement',
+      metaTitle: 'Consejos de Desarrollo | KronoSoft',
       metaDescription:
-        'Découvrez des astuces et conseils rapides sur le développement web et la cloud computing.',
+        'Descubre consejos y tips rápidos sobre desarrollo web y computación en la nube.',
       description:
-        'Découvrez des astuces et conseils rapides sur le développement web et la cloud computing.',
-      title: 'Nos Dernières Astuces',
-      noTips: 'Aucune astuce à afficher pour le moment.',
-      readTip: "Lire l'astuce",
-      backToList: 'Retour à la liste des astuces',
-      featuredTips: 'Astuces recommandées',
-      allTips: 'Toutes les astuces',
-      tipsAvailable: 'astuces disponibles',
-      tipAvailable: 'astuce disponible',
-      editOnGithub: 'Modifier sur GitHub',
+        'Descubre consejos y tips rápidos sobre desarrollo web y computación en la nube.',
+      title: 'Nuestros Últimos Consejos',
+      noTips: 'No hay consejos para mostrar en este momento.',
+      readTip: "Leer consejo",
+      backToList: 'Volver a la lista de consejos',
+      featuredTips: 'Consejos recomendados',
+      allTips: 'Todos los consejos',
+      tipsAvailable: 'consejos disponibles',
+      tipAvailable: 'consejo disponible',
+      editOnGithub: 'Editar en GitHub',
     },
     zodErrors: {
       // Common errors
-      invalid_type: 'Type invalide.',
-      invalid_type_received_undefined: 'Ce champ est requis.', // For required fields (fallback)
-      required_field_custom: 'Le champ {fieldName} est requis.',
+      invalid_type: 'Tipo inválido.',
+      invalid_type_received_undefined: 'Este campo es requerido.',
+      required_field_custom: 'El campo {fieldName} es requerido.',
       // String errors
-      too_small_string_minimum: 'Doit contenir au moins {minimum} caractères.',
-      too_big_string_maximum: 'Ne doit pas dépasser {maximum} caractères.',
-      invalid_string_email: 'Adresse e-mail invalide.',
-      invalid_string_url: 'URL invalide.',
-      invalid_string_uuid: 'UUID invalide.',
-      // You can add more specific messages as needed
+      too_small_string_minimum: 'Debe contener al menos {minimum} caracteres.',
+      too_big_string_maximum: 'No debe exceder {maximum} caracteres.',
+      invalid_string_email: 'Dirección de email inválida.',
+      invalid_string_url: 'URL inválida.',
+      invalid_string_uuid: 'UUID inválido.',
     },
   },
   en: {
@@ -274,9 +273,9 @@ export const ui = {
       },
     },
     site: {
-      title: 'My Awesome Template',
+      title: 'KronoSoft',
       description:
-        'A modern and performant Astro template to kickstart your project.',
+        'Software development company specialized in innovative technological solutions.',
     },
     nav: {
       home: 'Home',
@@ -289,32 +288,32 @@ export const ui = {
       rights: 'All rights reserved.',
     },
     homePage: {
-      pageTitle: 'Home | YOUR_NAME - FullStack Developer',
+      pageTitle: 'Home | KronoSoft - Software Company',
       pageDescription:
-        'Welcome to the portfolio of YOUR_NAME, a FullStack developer passionate about creating innovative web experiences.',
-      heroGreeting: "Hi, I'm YOUR_NAME",
-      heroSubtitlePart1: 'Full Stack Developer',
-      heroSubtitlePart2: 'UI/UX Enthusiast',
-      heroIntroduction: 'Add an introduction here.',
-      heroViewWorkButton: 'View My Work',
+        'Welcome to KronoSoft, a software development company specialized in creating innovative web experiences and cutting-edge technological solutions.',
+      heroGreeting: "Hi, We are KronoSoft",
+      heroSubtitlePart1: 'Software Development Company',
+      heroSubtitlePart2: 'Technology Specialists',
+      heroIntroduction: 'At KronoSoft, we transform ideas into innovative digital solutions. We are a company specialized in software development, web and mobile application creation, and technology consulting.',
+      heroViewWorkButton: 'View Our Work',
       heroContactButton: 'Get In Touch',
       heroImageAlt:
-        'Illustration representing YOUR_NAME or a development concept',
+        'Illustration representing KronoSoft or a development concept',
       featuredProjectsTitle: '3 latest projects',
       featuredProjectsDescription:
-        "Here are some of the projects I've recently worked on. Feel free to explore!",
+        "Here are some of the projects we've recently worked on. Feel free to explore!",
       projectCardViewProject: 'View Project',
       projectCardViewCode: 'View Code',
       imageNotAvailable: 'Image not available for now',
-      mySkillsTitle: 'My Skills',
+      mySkillsTitle: 'Our Skills',
       mySkillsDescription:
-        'Explore the expertise and abilities that define my work and passion.',
+        'Explore the expertise and abilities that define our work and passion for technology.',
     },
     blogPage: {
-      pageTitle: 'My Technical Blog',
+      pageTitle: 'Our Technical Blog',
       pageDescription:
         'Articles and thoughts on web development, software architecture, and new technologies.',
-      title: 'My Technical Blog',
+      title: 'Our Technical Blog',
       description:
         'Articles and thoughts on web development, software architecture, and new technologies.',
       comingSoon: 'Blog posts will appear here soon. Check back later!',
@@ -342,11 +341,11 @@ export const ui = {
       title: 'Table of Contents',
     },
     contactPage: {
-      pageTitle: 'Contact Me',
+      pageTitle: 'Contact Us',
       pageDescription:
         "Let's discuss your project, a potential collaboration, or just chat about tech!",
 
-      title: 'Contact Me',
+      title: 'Contact Us',
       description:
         "Let's discuss your project, a potential collaboration, or just chat about tech!",
       formTitle: 'Send a message',
@@ -361,9 +360,9 @@ export const ui = {
       messagePlaceholder: 'Your message here...',
       calendarTitle: 'Schedule a Meeting',
       calendarDescription:
-        'Prefer to talk live? Book a slot directly in my calendar.',
-      calendarButtonLabel: 'See my availability',
-      calendarLinkLabel: 'See my calendar',
+        'Prefer to talk live? Book a slot directly in our calendar.',
+      calendarButtonLabel: 'See our availability',
+      calendarLinkLabel: 'See our calendar',
       calendarPlaceHolder:
         'The integration with Google Calendar will be soon...',
       orSeparatorText: 'OR',
@@ -386,9 +385,9 @@ export const ui = {
       viewCodeButton: 'View Code',
     },
     projectsPage: {
-      title: 'My Projects',
-      metaTitle: "My Projects | YOUR_NAME's Portfolio",
-      metaDescription: "Discover all of YOUR_NAME's projects.",
+      title: 'Our Projects',
+      metaTitle: "Our Projects | KronoSoft",
+      metaDescription: "Discover all of KronoSoft's projects.",
       noProjects: 'No projects to display at the moment.',
       noProjectsDescription:
         "It seems that you don't have any projects to display at the moment.",
@@ -402,7 +401,7 @@ export const ui = {
     },
 
     tipsPage: {
-      metaTitle: 'Development Tips | YOUR_NAME',
+      metaTitle: 'Development Tips | KronoSoft',
       metaDescription:
         'Browse a collection of quick tips and advice on Web Development and Cloud Computing.',
       title: 'Latest Tips',
