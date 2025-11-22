@@ -112,7 +112,7 @@ export const ui = {
       readMore: 'Leer más',
       readingTimeSuffix: 'min de lectura',
       searchPlaceholder: 'Buscar artículos...',
-      filterByTagButtonLabel: 'Filtrar por etiqueta',
+      filterByTagButtonLabel: 'Filtrar por tag',
       noTagFound: 'No se encontró ninguna etiqueta.',
       selectTagCommandPlaceholder: 'Buscar etiqueta...',
       allTagsLabel: 'Todas las etiquetas',
