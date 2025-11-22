@@ -7,7 +7,7 @@ let lang = defaultLanguage as LanguageCode;
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('blog', ({ data }) => {
-    return data.isDraft !== true && data.lang === defaultLanguage;
+    return data.isDraft !== true && data.lang === 'es';
   });
   return blogEntries.map((post) => ({
     params: { slug: post.id },
