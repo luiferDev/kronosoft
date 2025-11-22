@@ -54,6 +54,9 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: ['three']
+    }
   },
 
   adapter: vercel(),
