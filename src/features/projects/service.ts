@@ -1,6 +1,7 @@
 // Import i18n utilities
 import { ui, defaultLanguage, type LanguageCode } from '@/i18n/ui';
 import placeholderImage from '@/assets/placeholder.webp';
+import zorvanz from '@/assets/zorvanz-hero.webp'
 import type {
   ProjectData,
   SkillData,
@@ -10,33 +11,315 @@ import type {
 
 const projectsListUnsorted: Array<ProjectData> = [
   {
-    id: 'sampleProject', // Unique identifier for translations
-    slug: 'sample-project', // Used in the URL
-    imageUrl: placeholderImage, // Use imported ImageMetadata
-    // projectUrl: '#', // Optional: Link to the live project
-    // codeUrl: '#', // Optional: Link to the source code
-    tags: ['Astro', 'TypeScript', 'Template'], // Generic tags
-    category: 'Web Application', // Generic category
-    date: '2025-01-01', // Generic date
+    id: 'Zorvanz',
+    slug: 'zorvanz',
+    imageUrl: zorvanz,
+    projectUrl: 'https://zorvanz.vercel.app',
+    codeUrl: 'https://github.com/luiferDev/zorvanz',
+    tags: ['React', 'TypeScript', '.NET', 'Supabase'],
+    category: 'e-Commerce',
+    date: '2025-10-15',
     galleryImages: [
-      // Optional: Gallery images for the project
-      // {
-      //   id: 'sampleGalleryImage1',
-      //   src: placeholderImage, // Placeholder, needs ImageMetadata
-      // },
+      {
+        id: 'zorvanzGallery1',
+        src: placeholderImage,
+      },
+      {
+        id: 'zorvanzGallery2',
+        src: placeholderImage,
+      },
     ],
     keyFeatures: [
-      // Key features (IDs for translation)
       { id: 'responsiveDesign' },
       { id: 'contentManagement' },
     ],
     technologiesUsed: [
-      // Technologies used (IDs for display)
-      { id: 'astro', name: 'Astro' },
+      { id: 'React', name: 'React' },
       { id: 'typescript', name: 'TypeScript' },
       { id: 'tailwindcss', name: 'TailwindCSS' },
     ],
   },
+  {
+    id: 'ecommerceProject',
+    slug: 'ecommerce-platform',
+    imageUrl: placeholderImage,
+    projectUrl: 'https://ecommerce.kronosoft.com',
+    codeUrl: 'https://github.com/kronosoft/ecommerce-platform',
+    tags: ['React', 'Node.js', 'MongoDB'],
+    category: 'E-commerce',
+    date: '2024-12-15',
+    galleryImages: [
+      {
+        id: 'ecommerceGallery1',
+        src: placeholderImage,
+      },
+      {
+        id: 'ecommerceGallery2',
+        src: placeholderImage,
+      },
+    ],
+    keyFeatures: [
+      { id: 'paymentIntegration' },
+      { id: 'inventoryManagement' },
+    ],
+    technologiesUsed: [
+      { id: 'react', name: 'React' },
+      { id: 'nodejs', name: 'Node.js' },
+      { id: 'mongodb', name: 'MongoDB' },
+    ],
+  },
+  {
+    id: 'taskManager',
+    slug: 'task-management-app',
+    imageUrl: placeholderImage,
+    projectUrl: 'https://tasks.kronosoft.com',
+    codeUrl: 'https://github.com/kronosoft/task-manager',
+    tags: ['Vue.js', 'Firebase', 'PWA'],
+    category: 'Productivity',
+    date: '2024-11-20',
+    galleryImages: [
+      {
+        id: 'taskGallery1',
+        src: placeholderImage,
+      },
+      {
+        id: 'taskGallery2',
+        src: placeholderImage,
+      },
+    ],
+    keyFeatures: [
+      { id: 'realTimeSync' },
+      { id: 'offlineMode' },
+    ],
+    technologiesUsed: [
+      { id: 'vue', name: 'Vue.js' },
+      { id: 'firebase', name: 'Firebase' },
+    ],
+  },
+  {
+    id: 'cryptoTracker',
+    slug: 'crypto-portfolio-tracker',
+    imageUrl: placeholderImage,
+    projectUrl: 'https://crypto.kronosoft.com',
+    codeUrl: 'https://github.com/kronosoft/crypto-tracker',
+    tags: ['Next.js', 'Chart.js', 'API'],
+    category: 'Finance',
+    date: '2024-10-30',
+    galleryImages: [
+      {
+        id: 'cryptoGallery1',
+        src: placeholderImage,
+      },
+      {
+        id: 'cryptoGallery2',
+        src: placeholderImage,
+      },
+    ],
+    keyFeatures: [
+      { id: 'liveData' },
+      { id: 'portfolioAnalytics' },
+    ],
+    technologiesUsed: [
+      { id: 'nextjs', name: 'Next.js' },
+      { id: 'chartjs', name: 'Chart.js' },
+    ],
+  },
+  {
+    id: 'socialMedia',
+    slug: 'social-media-dashboard',
+    imageUrl: placeholderImage,
+    projectUrl: 'https://social.kronosoft.com',
+    codeUrl: 'https://github.com/kronosoft/social-dashboard',
+    tags: ['React', 'GraphQL', 'PostgreSQL'],
+    category: 'Social Media',
+    date: '2024-09-15',
+    galleryImages: [
+      {
+        id: 'socialGallery1',
+        src: placeholderImage,
+      },
+      {
+        id: 'socialGallery2',
+        src: placeholderImage,
+      },
+    ],
+    keyFeatures: [
+      { id: 'multiPlatform' },
+      { id: 'analytics' },
+    ],
+    technologiesUsed: [
+      { id: 'react', name: 'React' },
+      { id: 'graphql', name: 'GraphQL' },
+    ],
+  },
+  {
+    id: 'weatherApp',
+    slug: 'weather-forecast-app',
+    imageUrl: placeholderImage,
+    projectUrl: 'https://play.google.com/store/apps/details?id=com.kronosoft.weather',
+    codeUrl: 'https://github.com/kronosoft/weather-app',
+    tags: ['Flutter', 'Dart', 'API'],
+    category: 'Mobile App',
+    date: '2024-08-25',
+    galleryImages: [
+      {
+        id: 'weatherGallery1',
+        src: placeholderImage,
+      },
+      {
+        id: 'weatherGallery2',
+        src: placeholderImage,
+      },
+    ],
+    keyFeatures: [
+      { id: 'geoLocation' },
+      { id: 'weatherAlerts' },
+    ],
+    technologiesUsed: [
+      { id: 'flutter', name: 'Flutter' },
+      { id: 'dart', name: 'Dart' },
+    ],
+  },
+  {
+    id: 'blogPlatform',
+    slug: 'modern-blog-platform',
+    imageUrl: placeholderImage,
+    projectUrl: 'https://blog.kronosoft.com',
+    codeUrl: 'https://github.com/kronosoft/blog-platform',
+    tags: ['Astro', 'MDX', 'Tailwind'],
+    category: 'Content Management',
+    date: '2024-07-10',
+    galleryImages: [
+      {
+        id: 'blogGallery1',
+        src: placeholderImage,
+      },
+      {
+        id: 'blogGallery2',
+        src: placeholderImage,
+      },
+    ],
+    keyFeatures: [
+      { id: 'seoOptimized' },
+      { id: 'fastLoading' },
+    ],
+    technologiesUsed: [
+      { id: 'astro', name: 'Astro' },
+      { id: 'mdx', name: 'MDX' },
+    ],
+  },
+  {
+    id: 'fitnessTracker',
+    slug: 'fitness-tracking-app',
+    imageUrl: placeholderImage,
+    projectUrl: 'https://apps.apple.com/app/kronofit/id123456789',
+    codeUrl: 'https://github.com/kronosoft/fitness-tracker',
+    tags: ['React Native', 'SQLite', 'Charts'],
+    category: 'Health & Fitness',
+    date: '2024-06-18',
+    galleryImages: [
+      {
+        id: 'fitnessGallery1',
+        src: placeholderImage,
+      },
+      {
+        id: 'fitnessGallery2',
+        src: placeholderImage,
+      },
+    ],
+    keyFeatures: [
+      { id: 'workoutPlans' },
+      { id: 'progressTracking' },
+    ],
+    technologiesUsed: [
+      { id: 'reactnative', name: 'React Native' },
+      { id: 'sqlite', name: 'SQLite' },
+    ],
+  },
+  {
+    id: 'aiChatbot',
+    slug: 'ai-customer-support',
+    imageUrl: placeholderImage,
+    projectUrl: 'https://chatbot.kronosoft.com',
+    codeUrl: 'https://github.com/kronosoft/ai-chatbot',
+    tags: ['Python', 'OpenAI', 'FastAPI'],
+    category: 'AI/ML',
+    date: '2024-05-22',
+    galleryImages: [
+      {
+        id: 'aiGallery1',
+        src: placeholderImage,
+      },
+      {
+        id: 'aiGallery2',
+        src: placeholderImage,
+      },
+    ],
+    keyFeatures: [
+      { id: 'naturalLanguage' },
+      { id: 'contextAware' },
+    ],
+    technologiesUsed: [
+      { id: 'python', name: 'Python' },
+      { id: 'openai', name: 'OpenAI' },
+    ],
+  },
+  {
+    id: 'eventManager',
+    slug: 'event-management-system',
+    imageUrl: placeholderImage,
+    projectUrl: 'https://events.kronosoft.com',
+    codeUrl: 'https://github.com/kronosoft/event-manager',
+    tags: ['Laravel', 'MySQL', 'Bootstrap'],
+    category: 'Event Management',
+    date: '2024-04-12',
+    galleryImages: [
+      {
+        id: 'eventGallery1',
+        src: placeholderImage,
+      },
+      {
+        id: 'eventGallery2',
+        src: placeholderImage,
+      },
+    ],
+    keyFeatures: [
+      { id: 'ticketing' },
+      { id: 'eventScheduling' },
+    ],
+    technologiesUsed: [
+      { id: 'laravel', name: 'Laravel' },
+      { id: 'mysql', name: 'MySQL' },
+    ],
+  },
+  {
+    id: 'iotDashboard',
+    slug: 'iot-monitoring-dashboard',
+    imageUrl: placeholderImage,
+    projectUrl: 'https://iot.kronosoft.com',
+    codeUrl: 'https://github.com/kronosoft/iot-dashboard',
+    tags: ['Angular', 'MQTT', 'InfluxDB'],
+    category: 'IoT',
+    date: '2024-03-08',
+    galleryImages: [
+      {
+        id: 'iotGallery1',
+        src: placeholderImage,
+      },
+      {
+        id: 'iotGallery2',
+        src: placeholderImage,
+      },
+    ],
+    keyFeatures: [
+      { id: 'realTimeMonitoring' },
+      { id: 'deviceControl' },
+    ],
+    technologiesUsed: [
+      { id: 'angular', name: 'Angular' },
+      { id: 'mqtt', name: 'MQTT' },
+    ],
+  }
 ];
 
 export const projectsList = [...projectsListUnsorted].sort((a, b) => {
