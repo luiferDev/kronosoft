@@ -28,7 +28,7 @@ const projectUrl = getRelativeLocaleUrl(lang, `/projects/${slug}`);
       <Image
         src={imageUrl}
         alt={imageAltText}
-        class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+        class="absolute inset-0 w-full h-full object-contain transition-transform duration-500 ease-in-out group-hover:scale-110"
         widths={[400, 800, 1200]}
         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
         quality="mid"
