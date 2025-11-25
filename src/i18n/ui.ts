@@ -393,6 +393,11 @@ export const ui = {
         description:
           'Desarrollo de soluciones basadas en inteligencia artificial.',
       },
+      mobileDevelopment: {
+        title: 'Desarrollo Móvil',
+        description:
+          'Creación de aplicaciones nativas para dispositivos móviles.',
+      },
     },
     site: {
       title: 'KronoSoft',
@@ -933,6 +938,10 @@ export const ui = {
       IA: {
         title: 'Artificial Intelligence',
         description: 'Creating AI based applications and systems.',
+      },
+      mobileDevelopment: {
+        title: 'Mobile Development',
+        description: 'Crafting mobile applications for various platforms.',
       },
     },
     site: {
