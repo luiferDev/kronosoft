@@ -15,6 +15,7 @@ import {
   Network,
   Brain,
   type LucideIcon,
+Smartphone,
 } from 'lucide-react';
 import type { IconType } from 'react-icons';
 import {
@@ -55,6 +56,7 @@ const iconComponents: Record<string, LucideIcon> = {
   PenTool,
   Network,
   Brain,
+  Smartphone
 };
 
 // Mapping for react-icons (specific technologies)
@@ -87,7 +89,11 @@ const techIconComponents: Record<string, IconType> = {
   amazonservices: SiAmazon,
 };
 
-import type { Technology } from '@/data/skills'; // Import the Technology type
+// Define Technology type locally
+type Technology = {
+  id: string;
+  name: string;
+};
 
 export type Props = {
   title: string;
