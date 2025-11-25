@@ -499,6 +499,14 @@ export const skillsList: Array<SkillData> = [
       { id: 'python', name: 'Python' },
     ],
   },
+  {
+    id: 'mobileDevelopment',
+    iconName: 'Smartphone',
+    technologies: [
+      { id: 'flutter', name: 'Flutter' },
+      { id: 'react-native', name: 'React Native' },
+    ],
+  },
 ];
 
 // Function to get skills with translated content
