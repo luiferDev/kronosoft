@@ -461,6 +461,7 @@ export const skillsList: Array<SkillData> = [
       { id: 'css', name: 'CSS' },
       { id: 'javascript', name: 'JavaScript' },
       { id: 'typescript', name: 'TypeScript' },
+      { id: 'react', name: 'React'}
     ],
   },
   {
@@ -469,6 +470,8 @@ export const skillsList: Array<SkillData> = [
     technologies: [
       { id: 'nodejs', name: 'Node.js' },
       { id: 'restapi', name: 'REST APIs' },
+      { id: 'graphql', name: 'GraphQL' },
+      { id: '.NET', name: '.NET' }
     ],
   },
   {
@@ -485,6 +488,15 @@ export const skillsList: Array<SkillData> = [
     technologies: [
       { id: 'git', name: 'Git' },
       { id: 'docker', name: 'Docker' },
+      { id: 'kubernetes', name: 'Kubernetes' },
+    ],
+  },
+  {
+    id: 'IA',
+    iconName: 'Brain',
+    technologies: [
+      { id: 'AI', name: 'AI' },
+      { id: 'python', name: 'Python' },
     ],
   },
 ];
