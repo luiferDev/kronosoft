@@ -388,6 +388,11 @@ export const ui = {
         description:
           'Automatización de procesos de desarrollo y despliegue.',
       },
+      IA: {
+        title: 'Inteligencia Artificial',
+        description:
+          'Desarrollo de soluciones basadas en inteligencia artificial.',
+      },
     },
     site: {
       title: 'KronoSoft',
@@ -924,6 +929,10 @@ export const ui = {
       devOps: {
         title: 'DevOps',
         description: 'Automating development and deployment processes.',
+      },
+      IA: {
+        title: 'Artificial Intelligence',
+        description: 'Creating AI based applications and systems.',
       },
     },
     site: {
