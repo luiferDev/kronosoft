@@ -2,8 +2,8 @@ import type { APIRoute } from 'astro';
 
 export const prerender = false;
 
-import { contactFormSchema as ContactFormSchema } from '@/features/contact/type'; // Using alias for clarity if needed, or direct import
-// import { sendEmail } from '@/lib/email'; // Example: Your email sending function would be imported here
+import { contactFormSchema as ContactFormSchema } from '@/features/contact/type';
+import { sendContactEmail } from '@/lib/email';
 import { ui, type LanguageCode } from '@/i18n/ui';
 import type {
   ContactFormTranslations,
@@ -73,35 +73,41 @@ export const POST: APIRoute = async ({ request }) => {
 
   const { firstName, lastName, email, message } = validationResult.data;
 
-  // --- Template Placeholder: Email Sending Logic ---
-  // The following section simulates email sending.
-  // In a real application, you would integrate an email sending service here
-  // (e.g., Resend, SendGrid, Nodemailer) using the validated data.
+  try {
+    const emailResult = await sendContactEmail({
+      firstName,
+      lastName,
+      email,
+      message,
+    });
 
-  console.log('Contact form submission received (simulation):');
-  console.log('Language used for submission:', lang);
-  console.log('Validated data:', validationResult.data);
-  console.log('---');
-  console.log('To implement actual email sending:');
-  console.log('1. Choose an email service provider.');
-  console.log('2. Install necessary SDKs (e.g., `bun add resend`).');
-  console.log(
-    '3. Configure API keys and sender/receiver emails in .env variables.'
-  );
-  console.log(
-    '4. Write a function (e.g., in `src/lib/email.ts`) to send emails using the SDK.'
-  );
-  console.log('5. Import and call that function here, handling its response.');
-  console.log('---');
-
-  // Simulate a successful submission for the template
-  return new Response(
-    JSON.stringify({
-      status: 'success',
-      message: `${currentTranslations.toastSuccessMessageSent} (Simulated - No email was sent)`,
-      // data: { simulatedId: `sim-${Date.now()}` } // Optionally, simulate some data in response
-    } as ContactFormApiResponse),
-    { status: 200, headers: { 'Content-Type': 'application/json' } }
-  );
-  // --- End Template Placeholder ---
+    if (emailResult.success) {
+      return new Response(
+        JSON.stringify({
+          status: 'success',
+          message: currentTranslations.toastSuccessMessageSent,
+        } as ContactFormApiResponse),
+        { status: 200, headers: { 'Content-Type': 'application/json' } }
+      );
+    } else {
+      return new Response(
+        JSON.stringify({
+          status: 'error',
+          message: currentTranslations.toastErrorFailedToSend,
+          error: 'Failed to send email',
+        } as ContactFormApiResponse),
+        { status: 500, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+  } catch (error) {
+    console.error('Error in contact form submission:', error);
+    return new Response(
+      JSON.stringify({
+        status: 'error',
+        message: currentTranslations.toastErrorUnexpected,
+        error: 'Server error',
+      } as ContactFormApiResponse),
+      { status: 500, headers: { 'Content-Type': 'application/json' } }
+    );
+  }
 };
