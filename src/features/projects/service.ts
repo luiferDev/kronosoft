@@ -40,21 +40,21 @@ const projectsListUnsorted: Array<ProjectData> = [
     ],
   },
   {
-    id: 'ecommerceProject',
-    slug: 'ecommerce-platform',
+    id: 'AmbuAlert',
+    slug: 'ambulance-alert',
     imageUrl: placeholderImage,
-    projectUrl: 'https://ecommerce.kronosoft.com',
+    projectUrl: 'https://ambualert.vercel.app/',
     codeUrl: 'https://github.com/kronosoft/ecommerce-platform',
     tags: ['React', 'Node.js', 'MongoDB'],
-    category: 'E-commerce',
+    category: 'medical',
     date: '2024-12-15',
     galleryImages: [
       {
-        id: 'ecommerceGallery1',
+        id: 'ambualertGallery1',
         src: placeholderImage,
       },
       {
-        id: 'ecommerceGallery2',
+        id: 'ambualertGallery2',
         src: placeholderImage,
       },
     ],
@@ -69,13 +69,13 @@ const projectsListUnsorted: Array<ProjectData> = [
     ],
   },
   {
-    id: 'taskManager',
-    slug: 'task-management-app',
+    id: 'codigoycafe',
+    slug: 'codigo-y-cafe-entre-amigos',
     imageUrl: placeholderImage,
-    projectUrl: 'https://tasks.kronosoft.com',
+    projectUrl: 'https://podcast-three-blush.vercel.app/',
     codeUrl: 'https://github.com/kronosoft/task-manager',
-    tags: ['Vue.js', 'Firebase', 'PWA'],
-    category: 'Productivity',
+    tags: ['html', 'css', 'JavaScript'],
+    category: 'Podcast',
     date: '2024-11-20',
     galleryImages: [
       {
@@ -97,13 +97,13 @@ const projectsListUnsorted: Array<ProjectData> = [
     ],
   },
   {
-    id: 'cryptoTracker',
-    slug: 'crypto-portfolio-tracker',
+    id: 'cofreSolidario',
+    slug: 'cofre-solidario',
     imageUrl: placeholderImage,
-    projectUrl: 'https://crypto.kronosoft.com',
+    projectUrl: 'https://podcast-three-blush.vercel.app/',
     codeUrl: 'https://github.com/kronosoft/crypto-tracker',
     tags: ['Next.js', 'Chart.js', 'API'],
-    category: 'Finance',
+    category: 'Care',
     date: '2024-10-30',
     galleryImages: [
       {
@@ -461,7 +461,7 @@ export const skillsList: Array<SkillData> = [
       { id: 'css', name: 'CSS' },
       { id: 'javascript', name: 'JavaScript' },
       { id: 'typescript', name: 'TypeScript' },
-      { id: 'react', name: 'React'}
+      { id: 'react', name: 'React' }
     ],
   },
   {
