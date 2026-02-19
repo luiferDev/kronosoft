@@ -75,15 +75,15 @@
 
 :root {
   --background: #cccccc;
-  --foreground: #202020;
+  --foreground: #000000;
   --card: #fcfcfc;
   --card-foreground: #202020;
   --popover: #fcfcfc;
   --popover-foreground: #202020;
-  --primary: #644a40;
-  --primary-foreground: #cccccc;
-  --secondary: #acac9a;
-  --secondary-foreground: #582d1d;
+  --primary: #0043ffff;
+  --primary-foreground: #ffffff;
+  --secondary: #0043ff64;
+  --secondary-foreground: #ffffff;
   --muted: #efefef;
   --muted-foreground: #646464;
   --accent: #e8e8e8;
