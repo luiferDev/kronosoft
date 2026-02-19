@@ -1,15 +1,19 @@
 ---
 import { defaultLanguage, type LanguageCode } from '@/i18n/ui';
 import { getRelativeLocaleUrl } from 'astro:i18n';
+import { Image } from 'astro:assets';
+import logo from '@/assets/kronosoft-logo.png';
+
 const currentLocale =
   (Astro.currentLocale as LanguageCode | undefined) ?? defaultLanguage;
 ---
 
 <a href={getRelativeLocaleUrl(currentLocale)}>
-  <!-- <span class="text-2xl font-bold text-primary"> KronoSoft </span> -->
-  <img
+  <Image
+    src={logo}
+    alt="KronoSoft logo"
+    width={176}
+    height={44}
     class="w-44 h-auto"
-    src="/src/assets/kronosoft-logo.png"
-    alt="kronosoft logo"
   />
 </a>
