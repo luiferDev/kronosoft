@@ -366,6 +366,102 @@ export const ui = {
         learnings: 'Comunicación MQTT y bases de datos de series temporales.',
         projectLinkText: 'Ver Dashboard IoT',
         codeLinkText: 'Ver Código en GitHub',
+      },
+      AmbuAlert: {
+        title: 'AmbuAlert',
+        description: 'Sistema de alerta de ambulancias en tiempo real.',
+        imageAltText: 'Dashboard de AmbuAlert',
+        categoryText: 'Médico',
+        dateText: 'Diciembre 2024',
+        detailedDescription: 'Plataforma para gestión y seguimiento de ambulancias en tiempo real.',
+        keyFeatures: {
+          paymentIntegration: {
+            title: 'Integración de Pagos',
+            description: 'Sistema de pagos seguro.',
+          },
+          inventoryManagement: {
+            title: 'Gestión de Inventario',
+            description: 'Control de recursos médicos.',
+          },
+        },
+        galleryImages: {
+          ambualertGallery1: {
+            alt: 'Dashboard de AmbuAlert',
+            caption: 'Panel de control principal',
+          },
+          ambualertGallery2: {
+            alt: 'Mapa de ambulancias',
+            caption: 'Seguimiento en tiempo real',
+          },
+        },
+        challenges: 'Implementación de seguimiento GPS en tiempo real.',
+        learnings: 'Aprendimos sobre sistemas de geolocalización y WebSockets.',
+        projectLinkText: 'Ver Plataforma',
+        codeLinkText: 'Ver Código en GitHub',
+      },
+      codigoycafe: {
+        title: 'Código y Café',
+        description: 'Blog técnico sobre programación y desarrollo.',
+        imageAltText: 'Blog Código y Café',
+        categoryText: 'Blog',
+        dateText: 'Noviembre 2024',
+        detailedDescription: 'Plataforma de blog para compartir conocimientos de programación.',
+        keyFeatures: {
+          paymentIntegration: {
+            title: 'Sistema de Comentarios',
+            description: 'Interacción con la comunidad.',
+          },
+          inventoryManagement: {
+            title: 'Gestión de Artículos',
+            description: 'CMS para publicaciones.',
+          },
+        },
+        galleryImages: {
+          codigoycafeGallery1: {
+            alt: 'Página principal del blog',
+            caption: 'Vista de artículos recientes',
+          },
+          codigoycafeGallery2: {
+            alt: 'Vista de artículo',
+            caption: 'Diseño de lectura optimizado',
+          },
+        },
+        challenges: 'Optimización SEO y velocidad de carga.',
+        learnings: 'Aprendimos sobre generación estática y MDX.',
+        projectLinkText: 'Ver Blog',
+        codeLinkText: 'Ver Código en GitHub',
+      },
+      cofreSolidario: {
+        title: 'Cofre Solidario',
+        description: 'Plataforma de donaciones y crowdfunding solidario.',
+        imageAltText: 'Plataforma Cofre Solidario',
+        categoryText: 'Social',
+        dateText: 'Octubre 2024',
+        detailedDescription: 'Sistema para gestionar campañas de donaciones y ayuda social.',
+        keyFeatures: {
+          paymentIntegration: {
+            title: 'Pagos Seguros',
+            description: 'Procesamiento de donaciones.',
+          },
+          inventoryManagement: {
+            title: 'Gestión de Campañas',
+            description: 'Administración de proyectos solidarios.',
+          },
+        },
+        galleryImages: {
+          cofreSolidarioGallery1: {
+            alt: 'Página de campañas',
+            caption: 'Lista de proyectos activos',
+          },
+          cofreSolidarioGallery2: {
+            alt: 'Detalle de campaña',
+            caption: 'Información y progreso de donaciones',
+          },
+        },
+        challenges: 'Implementación de sistema de pagos confiable.',
+        learnings: 'Aprendimos sobre pasarelas de pago y seguridad.',
+        projectLinkText: 'Ver Plataforma',
+        codeLinkText: 'Ver Código en GitHub',
       }
     },
     skillsContent: {
@@ -914,6 +1010,102 @@ export const ui = {
         challenges: 'Handling IoT protocols and latency.',
         learnings: 'MQTT communication and time series databases.',
         projectLinkText: 'View IoT Dashboard',
+        codeLinkText: 'View Code on GitHub',
+      },
+      AmbuAlert: {
+        title: 'AmbuAlert',
+        description: 'Real-time ambulance alert system.',
+        imageAltText: 'AmbuAlert dashboard',
+        categoryText: 'Medical',
+        dateText: 'December 2024',
+        detailedDescription: 'Platform for real-time ambulance management and tracking.',
+        keyFeatures: {
+          paymentIntegration: {
+            title: 'Payment Integration',
+            description: 'Secure payment system.',
+          },
+          inventoryManagement: {
+            title: 'Inventory Management',
+            description: 'Medical resources control.',
+          },
+        },
+        galleryImages: {
+          ambualertGallery1: {
+            alt: 'AmbuAlert dashboard',
+            caption: 'Main control panel',
+          },
+          ambualertGallery2: {
+            alt: 'Ambulance map',
+            caption: 'Real-time tracking',
+          },
+        },
+        challenges: 'Implementing real-time GPS tracking.',
+        learnings: 'Learned about geolocation systems and WebSockets.',
+        projectLinkText: 'View Platform',
+        codeLinkText: 'View Code on GitHub',
+      },
+      codigoycafe: {
+        title: 'Code and Coffee',
+        description: 'Technical blog about programming and development.',
+        imageAltText: 'Code and Coffee blog',
+        categoryText: 'Blog',
+        dateText: 'November 2024',
+        detailedDescription: 'Blog platform for sharing programming knowledge.',
+        keyFeatures: {
+          paymentIntegration: {
+            title: 'Comment System',
+            description: 'Community interaction.',
+          },
+          inventoryManagement: {
+            title: 'Article Management',
+            description: 'CMS for publications.',
+          },
+        },
+        galleryImages: {
+          codigoycafeGallery1: {
+            alt: 'Blog homepage',
+            caption: 'Recent articles view',
+          },
+          codigoycafeGallery2: {
+            alt: 'Article view',
+            caption: 'Optimized reading design',
+          },
+        },
+        challenges: 'SEO optimization and loading speed.',
+        learnings: 'Learned about static generation and MDX.',
+        projectLinkText: 'View Blog',
+        codeLinkText: 'View Code on GitHub',
+      },
+      cofreSolidario: {
+        title: 'Solidarity Chest',
+        description: 'Donation and solidarity crowdfunding platform.',
+        imageAltText: 'Solidarity Chest platform',
+        categoryText: 'Social',
+        dateText: 'October 2024',
+        detailedDescription: 'System to manage donation campaigns and social aid.',
+        keyFeatures: {
+          paymentIntegration: {
+            title: 'Secure Payments',
+            description: 'Donation processing.',
+          },
+          inventoryManagement: {
+            title: 'Campaign Management',
+            description: 'Solidarity project administration.',
+          },
+        },
+        galleryImages: {
+          cofreSolidarioGallery1: {
+            alt: 'Campaigns page',
+            caption: 'Active projects list',
+          },
+          cofreSolidarioGallery2: {
+            alt: 'Campaign detail',
+            caption: 'Donation information and progress',
+          },
+        },
+        challenges: 'Implementing reliable payment system.',
+        learnings: 'Learned about payment gateways and security.',
+        projectLinkText: 'View Platform',
         codeLinkText: 'View Code on GitHub',
       }
     },
