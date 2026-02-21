@@ -2,6 +2,8 @@
 import { ui, defaultLanguage, type LanguageCode } from '@/i18n/ui';
 import placeholderImage from '@/assets/placeholder.webp';
 import zorvanz from '@/assets/zorvanz-hero.webp'
+import ambualert from '@/assets/ambualer-hero.png'
+import codigo from '@/assets/codigo-hero.png'
 import type {
   ProjectData,
   SkillData,
@@ -42,7 +44,7 @@ const projectsListUnsorted: Array<ProjectData> = [
   {
     id: 'AmbuAlert',
     slug: 'ambulance-alert',
-    imageUrl: placeholderImage,
+    imageUrl: ambualert,
     projectUrl: 'https://ambualert.vercel.app/',
     codeUrl: 'https://github.com/kronosoft/ecommerce-platform',
     tags: ['React', 'Node.js', 'MongoDB'],
@@ -71,7 +73,7 @@ const projectsListUnsorted: Array<ProjectData> = [
   {
     id: 'codigoycafe',
     slug: 'codigo-y-cafe-entre-amigos',
-    imageUrl: placeholderImage,
+    imageUrl: codigo,
     projectUrl: 'https://podcast-three-blush.vercel.app/',
     codeUrl: 'https://github.com/kronosoft/task-manager',
     tags: ['html', 'css', 'JavaScript'],
