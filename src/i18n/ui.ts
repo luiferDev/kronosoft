@@ -12,42 +12,51 @@ export const ui = {
     projectsContent: {
       Zorvanz: {
         title: 'Zorvanz',
-        description: "Una plataforma e-commerce para una empresa de velas y ambientadores",
-        imageAltText: "Imagen placeholder para el proyecto de ejemplo",
+        description:
+          'E-commerce elegante para velas y ambientadores personalizados con fragancias a tu medida',
+        imageAltText: 'Imagen del e-commerce Zorvanz',
         categoryText: 'e-Commerce',
         dateText: 'Octubre 2025',
         detailedDescription:
-          "Una descripción más detallada de este proyecto de ejemplo, mostrando cómo estructurar el contenido para la página de detalle del proyecto.",
+          'Zorvanz es una plataforma de comercio electrónico especializada en la venta de velas y ambientadores artesanales. Lo que distingue a Zorvanz es su propuesta de valor única: los clientes pueden personalizar las fragancias a su gusto, creando experiencias olfativas exclusivas. El proyecto incluye un catálogo propio de productos, un diseño que transmite elegancia y clase, y una experiencia de compra fluida y sofisticada.',
         keyFeatures: {
-          responsiveDesign: {
-            title: 'Diseño Responsivo',
-            description: "El proyecto se adapta a todos los tamaños de pantalla.",
-          },
-          contentManagement: {
-            title: 'Gestión de Contenido Fácil',
+          personalizedFragrances: {
+            title: 'Personalización de Fragancias',
             description:
-              'Permite una gestión sencilla del contenido a través de archivos Markdown o un CMS.',
+              'Los clientes pueden crear fragancias únicas adaptadas a sus preferencias personales.',
+          },
+          catalog: {
+            title: 'Catálogo Propio',
+            description:
+              'Catálogo exclusivo de velas y ambientadores con opciones de personalización.',
+          },
+          responsiveDesign: {
+            title: 'Diseño Elegante',
+            description:
+              'Interfaz sofisticada que transmite clase y elegancia.',
           },
         },
         galleryImages: {
           zorvanzGallery1: {
-            alt: 'Captura de pantalla principal de Zorvanz',
-            caption: 'Página principal del e-commerce Zorvanz',
+            alt: 'Página principal de Zorvanz',
+            caption: 'E-commerce con diseño elegante y catálogo de productos',
           },
           zorvanzGallery2: {
-            alt: 'Panel de administración de Zorvanz',
-            caption: 'Dashboard administrativo con métricas',
+            alt: 'Panel de personalización de fragancias',
+            caption: 'Interfaz para crear fragancias personalizadas',
           },
         },
         challenges:
-          'Descripción de los desafíos encontrados durante la creación de este proyecto ejemplo.',
-        learnings: 'Descripción de los aprendizajes obtenidos de este proyecto ejemplo.',
+          'Crear una experiencia de compra que combinara la personalización de fragancias con un diseño elegante y sofisticado, manteniendo un rendimiento óptimo.',
+        learnings:
+          'Aprendimos a implementar sistemas de personalización complejos y a diseñar interfaces que transmiten elegancia y clase.',
         projectLinkText: 'Ver Proyecto en Vivo',
         codeLinkText: 'Ver Código en GitHub',
       },
       ecommerceProject: {
         title: 'Plataforma E-commerce',
-        description: 'Una plataforma completa de comercio electrónico con gestión de inventario.',
+        description:
+          'Una plataforma completa de comercio electrónico con gestión de inventario.',
         imageAltText: 'Captura de pantalla de la plataforma e-commerce',
         categoryText: 'E-commerce',
         dateText: 'Diciembre 2024',
@@ -56,11 +65,13 @@ export const ui = {
         keyFeatures: {
           paymentIntegration: {
             title: 'Integración de Pagos',
-            description: 'Sistema de pagos seguro con múltiples métodos de pago.',
+            description:
+              'Sistema de pagos seguro con múltiples métodos de pago.',
           },
           inventoryManagement: {
             title: 'Gestión de Inventario',
-            description: 'Control completo del inventario con alertas automáticas.',
+            description:
+              'Control completo del inventario con alertas automáticas.',
           },
         },
         galleryImages: {
@@ -75,17 +86,20 @@ export const ui = {
         },
         challenges:
           'Implementación de un sistema de pagos seguro y escalable fue el principal desafío.',
-        learnings: 'Aprendimos sobre arquitectura de microservicios y optimización de bases de datos.',
+        learnings:
+          'Aprendimos sobre arquitectura de microservicios y optimización de bases de datos.',
         projectLinkText: 'Ver Tienda Online',
         codeLinkText: 'Ver Código en GitHub',
       },
       taskManager: {
         title: 'Gestor de Tareas',
-        description: 'Aplicación de gestión de tareas con sincronización en tiempo real.',
+        description:
+          'Aplicación de gestión de tareas con sincronización en tiempo real.',
         imageAltText: 'Interfaz del gestor de tareas',
         categoryText: 'Productividad',
         dateText: 'Noviembre 2024',
-        detailedDescription: 'Aplicación web progresiva para gestión de tareas con capacidades offline y sincronización en tiempo real.',
+        detailedDescription:
+          'Aplicación web progresiva para gestión de tareas con capacidades offline y sincronización en tiempo real.',
         keyFeatures: {
           realTimeSync: {
             title: 'Sincronización en Tiempo Real',
@@ -113,11 +127,13 @@ export const ui = {
       },
       cryptoTracker: {
         title: 'Rastreador de Criptomonedas',
-        description: 'Plataforma para seguimiento de portafolio de criptomonedas.',
+        description:
+          'Plataforma para seguimiento de portafolio de criptomonedas.',
         imageAltText: 'Dashboard del rastreador de criptomonedas',
         categoryText: 'Finanzas',
         dateText: 'Octubre 2024',
-        detailedDescription: 'Aplicación para rastrear inversiones en criptomonedas con análisis en tiempo real.',
+        detailedDescription:
+          'Aplicación para rastrear inversiones en criptomonedas con análisis en tiempo real.',
         keyFeatures: {
           liveData: {
             title: 'Datos en Vivo',
@@ -145,15 +161,18 @@ export const ui = {
       },
       socialMedia: {
         title: 'Dashboard de Redes Sociales',
-        description: 'Panel de control para gestión de múltiples redes sociales.',
+        description:
+          'Panel de control para gestión de múltiples redes sociales.',
         imageAltText: 'Dashboard de redes sociales',
         categoryText: 'Redes Sociales',
         dateText: 'Septiembre 2024',
-        detailedDescription: 'Plataforma unificada para gestionar contenido en múltiples redes sociales.',
+        detailedDescription:
+          'Plataforma unificada para gestionar contenido en múltiples redes sociales.',
         keyFeatures: {
           multiPlatform: {
             title: 'Multi-Plataforma',
-            description: 'Gestiona Facebook, Twitter, Instagram desde un lugar.',
+            description:
+              'Gestiona Facebook, Twitter, Instagram desde un lugar.',
           },
           analytics: {
             title: 'Analíticas',
@@ -181,7 +200,8 @@ export const ui = {
         imageAltText: 'Interfaz de la app del clima',
         categoryText: 'Aplicación Móvil',
         dateText: 'Agosto 2024',
-        detailedDescription: 'App móvil con pronósticos precisos y alertas meteorológicas.',
+        detailedDescription:
+          'App móvil con pronósticos precisos y alertas meteorológicas.',
         keyFeatures: {
           geoLocation: {
             title: 'Geolocalización',
@@ -213,7 +233,8 @@ export const ui = {
         imageAltText: 'Editor de la plataforma de blog',
         categoryText: 'Gestión de Contenido',
         dateText: 'Julio 2024',
-        detailedDescription: 'Plataforma de blogging con generación estática y optimización automática.',
+        detailedDescription:
+          'Plataforma de blogging con generación estática y optimización automática.',
         keyFeatures: {
           seoOptimized: {
             title: 'Optimizado para SEO',
@@ -245,7 +266,8 @@ export const ui = {
         imageAltText: 'Interfaz del rastreador de fitness',
         categoryText: 'Salud y Fitness',
         dateText: 'Junio 2024',
-        detailedDescription: 'Aplicación completa para planificación y seguimiento de rutinas de ejercicio.',
+        detailedDescription:
+          'Aplicación completa para planificación y seguimiento de rutinas de ejercicio.',
         keyFeatures: {
           workoutPlans: {
             title: 'Planes de Entrenamiento',
@@ -273,11 +295,13 @@ export const ui = {
       },
       aiChatbot: {
         title: 'Chatbot de IA',
-        description: 'Sistema de soporte al cliente con inteligencia artificial.',
+        description:
+          'Sistema de soporte al cliente con inteligencia artificial.',
         imageAltText: 'Interfaz del chatbot de IA',
         categoryText: 'IA/ML',
         dateText: 'Mayo 2024',
-        detailedDescription: 'Chatbot inteligente para atención al cliente con procesamiento de lenguaje natural.',
+        detailedDescription:
+          'Chatbot inteligente para atención al cliente con procesamiento de lenguaje natural.',
         keyFeatures: {
           naturalLanguage: {
             title: 'Lenguaje Natural',
@@ -309,7 +333,8 @@ export const ui = {
         imageAltText: 'Panel de gestión de eventos',
         categoryText: 'Gestión de Eventos',
         dateText: 'Abril 2024',
-        detailedDescription: 'Sistema integral para planificación, venta de tickets y gestión de eventos.',
+        detailedDescription:
+          'Sistema integral para planificación, venta de tickets y gestión de eventos.',
         keyFeatures: {
           ticketing: {
             title: 'Sistema de Tickets',
@@ -341,7 +366,8 @@ export const ui = {
         imageAltText: 'Dashboard de monitoreo IoT',
         categoryText: 'IoT',
         dateText: 'Marzo 2024',
-        detailedDescription: 'Sistema de monitoreo en tiempo real para dispositivos IoT industriales.',
+        detailedDescription:
+          'Sistema de monitoreo en tiempo real para dispositivos IoT industriales.',
         keyFeatures: {
           realTimeMonitoring: {
             title: 'Monitoreo en Tiempo Real',
@@ -373,7 +399,8 @@ export const ui = {
         imageAltText: 'Dashboard de AmbuAlert',
         categoryText: 'Médico',
         dateText: 'Diciembre 2024',
-        detailedDescription: 'Plataforma para gestión y seguimiento de ambulancias en tiempo real.',
+        detailedDescription:
+          'Plataforma para gestión y seguimiento de ambulancias en tiempo real.',
         keyFeatures: {
           paymentIntegration: {
             title: 'Integración de Pagos',
@@ -405,7 +432,8 @@ export const ui = {
         imageAltText: 'Blog Código y Café',
         categoryText: 'Blog',
         dateText: 'Noviembre 2024',
-        detailedDescription: 'Plataforma de blog para compartir conocimientos de programación.',
+        detailedDescription:
+          'Plataforma de blog para compartir conocimientos de programación.',
         keyFeatures: {
           paymentIntegration: {
             title: 'Sistema de Comentarios',
@@ -437,7 +465,8 @@ export const ui = {
         imageAltText: 'Plataforma Cofre Solidario',
         categoryText: 'Social',
         dateText: 'Octubre 2024',
-        detailedDescription: 'Sistema para gestionar campañas de donaciones y ayuda social.',
+        detailedDescription:
+          'Sistema para gestionar campañas de donaciones y ayuda social.',
         keyFeatures: {
           paymentIntegration: {
             title: 'Pagos Seguros',
@@ -462,27 +491,26 @@ export const ui = {
         learnings: 'Aprendimos sobre pasarelas de pago y seguridad.',
         projectLinkText: 'Ver Plataforma',
         codeLinkText: 'Ver Código en GitHub',
-      }
+      },
     },
     skillsContent: {
       frontendDevelopment: {
         title: 'Desarrollo Frontend',
         description:
-          "Creación de interfaces de usuario interactivas y de alto rendimiento.",
+          'Creación de interfaces de usuario interactivas y de alto rendimiento.',
       },
       backendDevelopment: {
         title: 'Desarrollo Backend',
-        description: "Construcción de lógica de servidor robusta y APIs.",
+        description: 'Construcción de lógica de servidor robusta y APIs.',
       },
       uiUxDesign: {
         title: 'Diseño UI/UX',
         description:
-          "Diseño de experiencias de usuario intuitivas y estéticas.",
+          'Diseño de experiencias de usuario intuitivas y estéticas.',
       },
       devOps: {
         title: 'DevOps',
-        description:
-          'Automatización de procesos de desarrollo y despliegue.',
+        description: 'Automatización de procesos de desarrollo y despliegue.',
       },
       IA: {
         title: 'Inteligencia Artificial',
@@ -513,35 +541,36 @@ export const ui = {
     homePage: {
       pageTitle: 'Inicio | KronoSoft - Empresa de Software',
       pageDescription:
-        "Bienvenido a KronoSoft, empresa de desarrollo de software especializada en crear experiencias web innovadoras y soluciones tecnológicas de vanguardia.",
-      heroGreeting: "Hola, Somos KronoSoft",
+        'Bienvenido a KronoSoft, empresa de desarrollo de software especializada en crear experiencias web innovadoras y soluciones tecnológicas de vanguardia.',
+      heroGreeting: 'Hola, Somos KronoSoft',
       heroSubtitlePart1: 'Empresa de Desarrollo de Software',
       heroSubtitlePart2: 'Especialistas en Tecnología',
-      heroIntroduction: 'En KronoSoft transformamos ideas en soluciones digitales innovadoras. Somos una empresa especializada en desarrollo de software, creación de aplicaciones web y móviles, y consultoría tecnológica.',
+      heroIntroduction:
+        'En KronoSoft transformamos ideas en soluciones digitales innovadoras. Somos una empresa especializada en desarrollo de software, creación de aplicaciones web y móviles, y consultoría tecnológica.',
       heroViewWorkButton: 'Ver Nuestro Trabajo',
       heroContactButton: 'Contáctanos',
       heroImageAlt:
         'Ilustración representando KronoSoft o un concepto de desarrollo',
       featuredProjectsTitle: '3 últimos proyectos',
       featuredProjectsDescription:
-        "Aquí tienes algunos de los proyectos en los que hemos trabajado recientemente. ¡No dudes en explorarlos!",
+        'Aquí tienes algunos de los proyectos en los que hemos trabajado recientemente. ¡No dudes en explorarlos!',
       projectCardViewProject: 'Ver Proyecto',
       projectCardViewCode: 'Ver Código',
       imageNotAvailable: 'Imagen próximamente disponible',
       mySkillsTitle: 'Nuestras Competencias',
       mySkillsDescription:
-        "Explora la experiencia y habilidades que definen nuestro trabajo y pasión por la tecnología.",
+        'Explora la experiencia y habilidades que definen nuestro trabajo y pasión por la tecnología.',
     },
     blogPage: {
       pageTitle: 'Nuestro Blog Técnico',
       pageDescription:
-        "Artículos y reflexiones sobre desarrollo web, arquitectura de software y nuevas tecnologías.",
+        'Artículos y reflexiones sobre desarrollo web, arquitectura de software y nuevas tecnologías.',
       title: 'Nuestro Blog Técnico',
       description:
-        "Artículos y reflexiones sobre desarrollo web, arquitectura de software y nuevas tecnologías.",
+        'Artículos y reflexiones sobre desarrollo web, arquitectura de software y nuevas tecnologías.',
       comingSoon:
         '¡Los artículos del blog aparecerán aquí pronto. Vuelve más tarde!',
-      heroImageAlt: "Imagen de portada para el artículo: ",
+      heroImageAlt: 'Imagen de portada para el artículo: ',
       publishedOn: 'Publicado el: ',
       readMore: 'Leer más',
       readingTimeSuffix: 'min de lectura',
@@ -555,7 +584,7 @@ export const ui = {
     blogPost: {
       publishedOn: 'Publicado el: ',
       updatedOn: 'Actualizado el: ',
-      heroImageAlt: "Imagen de portada para el artículo: ",
+      heroImageAlt: 'Imagen de portada para el artículo: ',
       backToList: 'Volver a la lista de artículos',
       readingTimeSuffix: 'min de lectura',
       relatedPostsTitle: 'Te recomendamos también:',
@@ -563,15 +592,15 @@ export const ui = {
       editOnGithub: 'Proponer una modificación en GitHub',
     },
     toc: {
-      title: "Tabla de Contenidos",
+      title: 'Tabla de Contenidos',
     },
     contactPage: {
       pageTitle: 'Contáctanos',
       pageDescription:
-        "¡Hablemos de tu proyecto, una colaboración potencial, o simplemente para intercambiar sobre tecnología!",
+        '¡Hablemos de tu proyecto, una colaboración potencial, o simplemente para intercambiar sobre tecnología!',
       title: 'Contáctanos',
       description:
-        "¡Hablemos de tu proyecto, una colaboración potencial, o simplemente para intercambiar sobre tecnología!",
+        '¡Hablemos de tu proyecto, una colaboración potencial, o simplemente para intercambiar sobre tecnología!',
 
       formTitle: 'Enviar un mensaje',
       firstNameLabel: 'Nombre',
@@ -590,12 +619,12 @@ export const ui = {
       calendarButtonLabel: 'Ver nuestras disponibilidades',
       calendarLinkLabel: 'Ver nuestra agenda',
       calendarPlaceHolder:
-        "La integración con Google Calendar estará disponible pronto...",
+        'La integración con Google Calendar estará disponible pronto...',
       orSeparatorText: 'O',
       toastSuccessMessageSent: '¡Mensaje enviado con éxito!',
-      toastErrorFailedToSend: "Error al enviar el mensaje.",
-      toastErrorUnexpected: "Ocurrió un error inesperado.",
-      toastErrorDetails: "Detalles del error:",
+      toastErrorFailedToSend: 'Error al enviar el mensaje.',
+      toastErrorUnexpected: 'Ocurrió un error inesperado.',
+      toastErrorDetails: 'Detalles del error:',
       toastErrorValidationFailed: 'Validación del formulario fallida.',
     },
     projectDetailPage: {
@@ -616,14 +645,14 @@ export const ui = {
       metaDescription: 'Descubre todos nuestros proyectos.',
       noProjects: 'No hay proyectos para mostrar en este momento.',
       noProjectsDescription:
-        "Parece que aún no tenemos proyectos para mostrar.",
+        'Parece que aún no tenemos proyectos para mostrar.',
     },
     notFoundPage: {
       pageTitle: 'Página No Encontrada',
       title: '¡Ups! Página No Encontrada',
       message:
-        "Lo sentimos, la página que buscas no parece existir. Verifica la URL o regresa a la página de inicio.",
-      homeLink: "Volver al Inicio",
+        'Lo sentimos, la página que buscas no parece existir. Verifica la URL o regresa a la página de inicio.',
+      homeLink: 'Volver al Inicio',
     },
 
     tipsPage: {
@@ -634,7 +663,7 @@ export const ui = {
         'Descubre consejos y tips rápidos sobre desarrollo web y computación en la nube.',
       title: 'Nuestros Últimos Consejos',
       noTips: 'No hay consejos para mostrar en este momento.',
-      readTip: "Leer consejo",
+      readTip: 'Leer consejo',
       backToList: 'Volver a la lista de consejos',
       featuredTips: 'Consejos recomendados',
       allTips: 'Todos los consejos',
@@ -659,46 +688,56 @@ export const ui = {
     projectsContent: {
       Zorvanz: {
         title: 'Zorvanz',
-        description: 'An e-commerce platform for a candles and air fresheners company',
-        imageAltText: 'Placeholder image for the sample project',
+        description:
+          'Elegant e-commerce for candles and personalized air fresheners with fragrances tailored to you',
+        imageAltText: 'Zorvanz e-commerce image',
         categoryText: 'e-Commerce',
         dateText: 'October 2025',
         detailedDescription:
-          'A more detailed description of this sample project, showing how to structure content for the project detail page.',
+          'Zorvanz is an e-commerce platform specializing in the sale of artisanal candles and air fresheners. What sets Zorvanz apart is its unique value proposition: customers can personalize fragrances to their liking, creating exclusive olfactory experiences. The project includes its own product catalog, a design that conveys elegance and class, and a sophisticated, seamless shopping experience.',
         keyFeatures: {
-          responsiveDesign: {
-            title: 'Responsive Design',
-            description: 'The project adapts to all screen sizes.',
-          },
-          contentManagement: {
-            title: 'Easy Content Management',
+          personalizedFragrances: {
+            title: 'Fragrance Personalization',
             description:
-              'Allows for easy content management via Markdown files or a CMS.',
+              'Customers can create unique fragrances tailored to their personal preferences.',
+          },
+          catalog: {
+            title: 'Own Catalog',
+            description:
+              'Exclusive catalog of candles and air fresheners with personalization options.',
+          },
+          responsiveDesign: {
+            title: 'Elegant Design',
+            description:
+              'Sophisticated interface that conveys class and elegance.',
           },
         },
         galleryImages: {
           zorvanzGallery1: {
-            alt: 'Main screenshot of Zorvanz',
-            caption: 'Zorvanz e-commerce homepage',
+            alt: 'Zorvanz homepage',
+            caption: 'E-commerce with elegant design and product catalog',
           },
           zorvanzGallery2: {
-            alt: 'Zorvanz admin panel',
-            caption: 'Administrative dashboard with metrics',
+            alt: 'Fragrance personalization panel',
+            caption: 'Interface for creating personalized fragrances',
           },
         },
         challenges:
-          'Description of challenges encountered while creating this sample project.',
-        learnings: 'Description of learnings from this sample project.',
+          'Creating a shopping experience that combined fragrance personalization with an elegant and sophisticated design while maintaining optimal performance.',
+        learnings:
+          'We learned how to implement complex personalization systems and design interfaces that convey elegance and class.',
         projectLinkText: 'View Live Project',
         codeLinkText: 'View Code on GitHub',
       },
       ecommerceProject: {
         title: 'E-commerce Platform',
-        description: 'A complete e-commerce platform with inventory management.',
+        description:
+          'A complete e-commerce platform with inventory management.',
         imageAltText: 'Screenshot of the e-commerce platform',
         categoryText: 'E-commerce',
         dateText: 'December 2024',
-        detailedDescription: 'E-commerce platform developed with modern technologies, including payment system, inventory management and administrative panel.',
+        detailedDescription:
+          'E-commerce platform developed with modern technologies, including payment system, inventory management and administrative panel.',
         keyFeatures: {
           paymentIntegration: {
             title: 'Payment Integration',
@@ -719,18 +758,22 @@ export const ui = {
             caption: 'Simplified purchase flow',
           },
         },
-        challenges: 'Implementing a secure and scalable payment system was the main challenge.',
-        learnings: 'We learned about microservices architecture and database optimization.',
+        challenges:
+          'Implementing a secure and scalable payment system was the main challenge.',
+        learnings:
+          'We learned about microservices architecture and database optimization.',
         projectLinkText: 'View Online Store',
         codeLinkText: 'View Code on GitHub',
       },
       taskManager: {
         title: 'Task Manager',
-        description: 'Task management application with real-time synchronization.',
+        description:
+          'Task management application with real-time synchronization.',
         imageAltText: 'Task manager interface',
         categoryText: 'Productivity',
         dateText: 'November 2024',
-        detailedDescription: 'Progressive web application for task management with offline capabilities and real-time sync.',
+        detailedDescription:
+          'Progressive web application for task management with offline capabilities and real-time sync.',
         keyFeatures: {
           realTimeSync: {
             title: 'Real-Time Sync',
@@ -762,7 +805,8 @@ export const ui = {
         imageAltText: 'Crypto tracker dashboard',
         categoryText: 'Finance',
         dateText: 'October 2024',
-        detailedDescription: 'Application to track cryptocurrency investments with real-time analysis.',
+        detailedDescription:
+          'Application to track cryptocurrency investments with real-time analysis.',
         keyFeatures: {
           liveData: {
             title: 'Live Data',
@@ -794,7 +838,8 @@ export const ui = {
         imageAltText: 'Social media dashboard',
         categoryText: 'Social Media',
         dateText: 'September 2024',
-        detailedDescription: 'Unified platform to manage content across multiple social networks.',
+        detailedDescription:
+          'Unified platform to manage content across multiple social networks.',
         keyFeatures: {
           multiPlatform: {
             title: 'Multi-Platform',
@@ -826,7 +871,8 @@ export const ui = {
         imageAltText: 'Weather app interface',
         categoryText: 'Mobile App',
         dateText: 'August 2024',
-        detailedDescription: 'Mobile app with accurate forecasts and weather alerts.',
+        detailedDescription:
+          'Mobile app with accurate forecasts and weather alerts.',
         keyFeatures: {
           geoLocation: {
             title: 'Geolocation',
@@ -858,7 +904,8 @@ export const ui = {
         imageAltText: 'Blog platform editor',
         categoryText: 'Content Management',
         dateText: 'July 2024',
-        detailedDescription: 'Blogging platform with static generation and automatic optimization.',
+        detailedDescription:
+          'Blogging platform with static generation and automatic optimization.',
         keyFeatures: {
           seoOptimized: {
             title: 'SEO Optimized',
@@ -890,7 +937,8 @@ export const ui = {
         imageAltText: 'Fitness tracker interface',
         categoryText: 'Health & Fitness',
         dateText: 'June 2024',
-        detailedDescription: 'Complete application for planning and tracking exercise routines.',
+        detailedDescription:
+          'Complete application for planning and tracking exercise routines.',
         keyFeatures: {
           workoutPlans: {
             title: 'Workout Plans',
@@ -922,7 +970,8 @@ export const ui = {
         imageAltText: 'AI chatbot interface',
         categoryText: 'AI/ML',
         dateText: 'May 2024',
-        detailedDescription: 'Intelligent chatbot for customer service with natural language processing.',
+        detailedDescription:
+          'Intelligent chatbot for customer service with natural language processing.',
         keyFeatures: {
           naturalLanguage: {
             title: 'Natural Language',
@@ -954,7 +1003,8 @@ export const ui = {
         imageAltText: 'Event management panel',
         categoryText: 'Event Management',
         dateText: 'April 2024',
-        detailedDescription: 'Comprehensive system for planning, ticket sales and event management.',
+        detailedDescription:
+          'Comprehensive system for planning, ticket sales and event management.',
         keyFeatures: {
           ticketing: {
             title: 'Ticketing System',
@@ -986,7 +1036,8 @@ export const ui = {
         imageAltText: 'IoT monitoring dashboard',
         categoryText: 'IoT',
         dateText: 'March 2024',
-        detailedDescription: 'Real-time monitoring system for industrial IoT devices.',
+        detailedDescription:
+          'Real-time monitoring system for industrial IoT devices.',
         keyFeatures: {
           realTimeMonitoring: {
             title: 'Real-Time Monitoring',
@@ -1018,7 +1069,8 @@ export const ui = {
         imageAltText: 'AmbuAlert dashboard',
         categoryText: 'Medical',
         dateText: 'December 2024',
-        detailedDescription: 'Platform for real-time ambulance management and tracking.',
+        detailedDescription:
+          'Platform for real-time ambulance management and tracking.',
         keyFeatures: {
           paymentIntegration: {
             title: 'Payment Integration',
@@ -1082,7 +1134,8 @@ export const ui = {
         imageAltText: 'Solidarity Chest platform',
         categoryText: 'Social',
         dateText: 'October 2024',
-        detailedDescription: 'System to manage donation campaigns and social aid.',
+        detailedDescription:
+          'System to manage donation campaigns and social aid.',
         keyFeatures: {
           paymentIntegration: {
             title: 'Secure Payments',
@@ -1107,7 +1160,7 @@ export const ui = {
         learnings: 'Learned about payment gateways and security.',
         projectLinkText: 'View Platform',
         codeLinkText: 'View Code on GitHub',
-      }
+      },
     },
     skillsContent: {
       frontendDevelopment: {
@@ -1155,10 +1208,11 @@ export const ui = {
       pageTitle: 'Home | KronoSoft - Software Company',
       pageDescription:
         'Welcome to KronoSoft, a software development company specialized in creating innovative web experiences and cutting-edge technological solutions.',
-      heroGreeting: "Hi, We are KronoSoft",
+      heroGreeting: 'Hi, We are KronoSoft',
       heroSubtitlePart1: 'Software Development Company',
       heroSubtitlePart2: 'Technology Specialists',
-      heroIntroduction: 'At KronoSoft, we transform ideas into innovative digital solutions. We are a company specialized in software development, web and mobile application creation, and technology consulting.',
+      heroIntroduction:
+        'At KronoSoft, we transform ideas into innovative digital solutions. We are a company specialized in software development, web and mobile application creation, and technology consulting.',
       heroViewWorkButton: 'View Our Work',
       heroContactButton: 'Get In Touch',
       heroImageAlt:
@@ -1250,7 +1304,7 @@ export const ui = {
     },
     projectsPage: {
       title: 'Our Projects',
-      metaTitle: "Our Projects | KronoSoft",
+      metaTitle: 'Our Projects | KronoSoft',
       metaDescription: "Discover all of KronoSoft's projects.",
       noProjects: 'No projects to display at the moment.',
       noProjectsDescription:
