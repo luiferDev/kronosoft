@@ -98,230 +98,202 @@ const projectsListUnsorted: Array<ProjectData> = [
       { id: 'firebase', name: 'Firebase' },
     ],
   },
-  {
-    id: 'cofreSolidario',
-    slug: 'cofre-solidario',
-    imageUrl: placeholderImage,
-    projectUrl: 'https://podcast-three-blush.vercel.app/',
-    codeUrl: 'https://github.com/kronosoft/crypto-tracker',
-    tags: ['Next.js', 'Chart.js', 'API'],
-    category: 'Care',
-    date: '2024-10-30',
-    galleryImages: [
-      {
-        id: 'cryptoGallery1',
-        src: placeholderImage,
-      },
-      {
-        id: 'cryptoGallery2',
-        src: placeholderImage,
-      },
-    ],
-    keyFeatures: [
-      { id: 'liveData' },
-      { id: 'portfolioAnalytics' },
-    ],
-    technologiesUsed: [
-      { id: 'nextjs', name: 'Next.js' },
-      { id: 'chartjs', name: 'Chart.js' },
-    ],
-  },
-  {
-    id: 'socialMedia',
-    slug: 'social-media-dashboard',
-    imageUrl: placeholderImage,
-    projectUrl: 'https://social.kronosoft.com',
-    codeUrl: 'https://github.com/kronosoft/social-dashboard',
-    tags: ['React', 'GraphQL', 'PostgreSQL'],
-    category: 'Social Media',
-    date: '2024-09-15',
-    galleryImages: [
-      {
-        id: 'socialGallery1',
-        src: placeholderImage,
-      },
-      {
-        id: 'socialGallery2',
-        src: placeholderImage,
-      },
-    ],
-    keyFeatures: [
-      { id: 'multiPlatform' },
-      { id: 'analytics' },
-    ],
-    technologiesUsed: [
-      { id: 'react', name: 'React' },
-      { id: 'graphql', name: 'GraphQL' },
-    ],
-  },
-  {
-    id: 'weatherApp',
-    slug: 'weather-forecast-app',
-    imageUrl: placeholderImage,
-    projectUrl: 'https://play.google.com/store/apps/details?id=com.kronosoft.weather',
-    codeUrl: 'https://github.com/kronosoft/weather-app',
-    tags: ['Flutter', 'Dart', 'API'],
-    category: 'Mobile App',
-    date: '2024-08-25',
-    galleryImages: [
-      {
-        id: 'weatherGallery1',
-        src: placeholderImage,
-      },
-      {
-        id: 'weatherGallery2',
-        src: placeholderImage,
-      },
-    ],
-    keyFeatures: [
-      { id: 'geoLocation' },
-      { id: 'weatherAlerts' },
-    ],
-    technologiesUsed: [
-      { id: 'flutter', name: 'Flutter' },
-      { id: 'dart', name: 'Dart' },
-    ],
-  },
-  {
-    id: 'blogPlatform',
-    slug: 'modern-blog-platform',
-    imageUrl: placeholderImage,
-    projectUrl: 'https://blog.kronosoft.com',
-    codeUrl: 'https://github.com/kronosoft/blog-platform',
-    tags: ['Astro', 'MDX', 'Tailwind'],
-    category: 'Content Management',
-    date: '2024-07-10',
-    galleryImages: [
-      {
-        id: 'blogGallery1',
-        src: placeholderImage,
-      },
-      {
-        id: 'blogGallery2',
-        src: placeholderImage,
-      },
-    ],
-    keyFeatures: [
-      { id: 'seoOptimized' },
-      { id: 'fastLoading' },
-    ],
-    technologiesUsed: [
-      { id: 'astro', name: 'Astro' },
-      { id: 'mdx', name: 'MDX' },
-    ],
-  },
-  {
-    id: 'fitnessTracker',
-    slug: 'fitness-tracking-app',
-    imageUrl: placeholderImage,
-    projectUrl: 'https://apps.apple.com/app/kronofit/id123456789',
-    codeUrl: 'https://github.com/kronosoft/fitness-tracker',
-    tags: ['React Native', 'SQLite', 'Charts'],
-    category: 'Health & Fitness',
-    date: '2024-06-18',
-    galleryImages: [
-      {
-        id: 'fitnessGallery1',
-        src: placeholderImage,
-      },
-      {
-        id: 'fitnessGallery2',
-        src: placeholderImage,
-      },
-    ],
-    keyFeatures: [
-      { id: 'workoutPlans' },
-      { id: 'progressTracking' },
-    ],
-    technologiesUsed: [
-      { id: 'reactnative', name: 'React Native' },
-      { id: 'sqlite', name: 'SQLite' },
-    ],
-  },
-  {
-    id: 'aiChatbot',
-    slug: 'ai-customer-support',
-    imageUrl: placeholderImage,
-    projectUrl: 'https://chatbot.kronosoft.com',
-    codeUrl: 'https://github.com/kronosoft/ai-chatbot',
-    tags: ['Python', 'OpenAI', 'FastAPI'],
-    category: 'AI/ML',
-    date: '2024-05-22',
-    galleryImages: [
-      {
-        id: 'aiGallery1',
-        src: placeholderImage,
-      },
-      {
-        id: 'aiGallery2',
-        src: placeholderImage,
-      },
-    ],
-    keyFeatures: [
-      { id: 'naturalLanguage' },
-      { id: 'contextAware' },
-    ],
-    technologiesUsed: [
-      { id: 'python', name: 'Python' },
-      { id: 'openai', name: 'OpenAI' },
-    ],
-  },
-  {
-    id: 'eventManager',
-    slug: 'event-management-system',
-    imageUrl: placeholderImage,
-    projectUrl: 'https://events.kronosoft.com',
-    codeUrl: 'https://github.com/kronosoft/event-manager',
-    tags: ['Laravel', 'MySQL', 'Bootstrap'],
-    category: 'Event Management',
-    date: '2024-04-12',
-    galleryImages: [
-      {
-        id: 'eventGallery1',
-        src: placeholderImage,
-      },
-      {
-        id: 'eventGallery2',
-        src: placeholderImage,
-      },
-    ],
-    keyFeatures: [
-      { id: 'ticketing' },
-      { id: 'eventScheduling' },
-    ],
-    technologiesUsed: [
-      { id: 'laravel', name: 'Laravel' },
-      { id: 'mysql', name: 'MySQL' },
-    ],
-  },
-  {
-    id: 'iotDashboard',
-    slug: 'iot-monitoring-dashboard',
-    imageUrl: placeholderImage,
-    projectUrl: 'https://iot.kronosoft.com',
-    codeUrl: 'https://github.com/kronosoft/iot-dashboard',
-    tags: ['Angular', 'MQTT', 'InfluxDB'],
-    category: 'IoT',
-    date: '2024-03-08',
-    galleryImages: [
-      {
-        id: 'iotGallery1',
-        src: placeholderImage,
-      },
-      {
-        id: 'iotGallery2',
-        src: placeholderImage,
-      },
-    ],
-    keyFeatures: [
-      { id: 'realTimeMonitoring' },
-      { id: 'deviceControl' },
-    ],
-    technologiesUsed: [
-      { id: 'angular', name: 'Angular' },
-      { id: 'mqtt', name: 'MQTT' },
-    ],
-  }
+  // {
+  //   id: 'socialMedia',
+  //   slug: 'social-media-dashboard',
+  //   imageUrl: placeholderImage,
+  //   projectUrl: 'https://social.kronosoft.com',
+  //   codeUrl: 'https://github.com/kronosoft/social-dashboard',
+  //   tags: ['React', 'GraphQL', 'PostgreSQL'],
+  //   category: 'Social Media',
+  //   date: '2024-09-15',
+  //   galleryImages: [
+  //     {
+  //       id: 'socialGallery1',
+  //       src: placeholderImage,
+  //     },
+  //     {
+  //       id: 'socialGallery2',
+  //       src: placeholderImage,
+  //     },
+  //   ],
+  //   keyFeatures: [
+  //     { id: 'multiPlatform' },
+  //     { id: 'analytics' },
+  //   ],
+  //   technologiesUsed: [
+  //     { id: 'react', name: 'React' },
+  //     { id: 'graphql', name: 'GraphQL' },
+  //   ],
+  // },
+  // {
+  //   id: 'weatherApp',
+  //   slug: 'weather-forecast-app',
+  //   imageUrl: placeholderImage,
+  //   projectUrl: 'https://play.google.com/store/apps/details?id=com.kronosoft.weather',
+  //   codeUrl: 'https://github.com/kronosoft/weather-app',
+  //   tags: ['Flutter', 'Dart', 'API'],
+  //   category: 'Mobile App',
+  //   date: '2024-08-25',
+  //   galleryImages: [
+  //     {
+  //       id: 'weatherGallery1',
+  //       src: placeholderImage,
+  //     },
+  //     {
+  //       id: 'weatherGallery2',
+  //       src: placeholderImage,
+  //     },
+  //   ],
+  //   keyFeatures: [
+  //     { id: 'geoLocation' },
+  //     { id: 'weatherAlerts' },
+  //   ],
+  //   technologiesUsed: [
+  //     { id: 'flutter', name: 'Flutter' },
+  //     { id: 'dart', name: 'Dart' },
+  //   ],
+  // },
+  // {
+  //   id: 'blogPlatform',
+  //   slug: 'modern-blog-platform',
+  //   imageUrl: placeholderImage,
+  //   projectUrl: 'https://blog.kronosoft.com',
+  //   codeUrl: 'https://github.com/kronosoft/blog-platform',
+  //   tags: ['Astro', 'MDX', 'Tailwind'],
+  //   category: 'Content Management',
+  //   date: '2024-07-10',
+  //   galleryImages: [
+  //     {
+  //       id: 'blogGallery1',
+  //       src: placeholderImage,
+  //     },
+  //     {
+  //       id: 'blogGallery2',
+  //       src: placeholderImage,
+  //     },
+  //   ],
+  //   keyFeatures: [
+  //     { id: 'seoOptimized' },
+  //     { id: 'fastLoading' },
+  //   ],
+  //   technologiesUsed: [
+  //     { id: 'astro', name: 'Astro' },
+  //     { id: 'mdx', name: 'MDX' },
+  //   ],
+  // },
+  // {
+  //   id: 'fitnessTracker',
+  //   slug: 'fitness-tracking-app',
+  //   imageUrl: placeholderImage,
+  //   projectUrl: 'https://apps.apple.com/app/kronofit/id123456789',
+  //   codeUrl: 'https://github.com/kronosoft/fitness-tracker',
+  //   tags: ['React Native', 'SQLite', 'Charts'],
+  //   category: 'Health & Fitness',
+  //   date: '2024-06-18',
+  //   galleryImages: [
+  //     {
+  //       id: 'fitnessGallery1',
+  //       src: placeholderImage,
+  //     },
+  //     {
+  //       id: 'fitnessGallery2',
+  //       src: placeholderImage,
+  //     },
+  //   ],
+  //   keyFeatures: [
+  //     { id: 'workoutPlans' },
+  //     { id: 'progressTracking' },
+  //   ],
+  //   technologiesUsed: [
+  //     { id: 'reactnative', name: 'React Native' },
+  //     { id: 'sqlite', name: 'SQLite' },
+  //   ],
+  // },
+  // {
+  //   id: 'aiChatbot',
+  //   slug: 'ai-customer-support',
+  //   imageUrl: placeholderImage,
+  //   projectUrl: 'https://chatbot.kronosoft.com',
+  //   codeUrl: 'https://github.com/kronosoft/ai-chatbot',
+  //   tags: ['Python', 'OpenAI', 'FastAPI'],
+  //   category: 'AI/ML',
+  //   date: '2024-05-22',
+  //   galleryImages: [
+  //     {
+  //       id: 'aiGallery1',
+  //       src: placeholderImage,
+  //     },
+  //     {
+  //       id: 'aiGallery2',
+  //       src: placeholderImage,
+  //     },
+  //   ],
+  //   keyFeatures: [
+  //     { id: 'naturalLanguage' },
+  //     { id: 'contextAware' },
+  //   ],
+  //   technologiesUsed: [
+  //     { id: 'python', name: 'Python' },
+  //     { id: 'openai', name: 'OpenAI' },
+  //   ],
+  // },
+  // {
+  //   id: 'eventManager',
+  //   slug: 'event-management-system',
+  //   imageUrl: placeholderImage,
+  //   projectUrl: 'https://events.kronosoft.com',
+  //   codeUrl: 'https://github.com/kronosoft/event-manager',
+  //   tags: ['Laravel', 'MySQL', 'Bootstrap'],
+  //   category: 'Event Management',
+  //   date: '2024-04-12',
+  //   galleryImages: [
+  //     {
+  //       id: 'eventGallery1',
+  //       src: placeholderImage,
+  //     },
+  //     {
+  //       id: 'eventGallery2',
+  //       src: placeholderImage,
+  //     },
+  //   ],
+  //   keyFeatures: [
+  //     { id: 'ticketing' },
+  //     { id: 'eventScheduling' },
+  //   ],
+  //   technologiesUsed: [
+  //     { id: 'laravel', name: 'Laravel' },
+  //     { id: 'mysql', name: 'MySQL' },
+  //   ],
+  // },
+  // {
+  //   id: 'iotDashboard',
+  //   slug: 'iot-monitoring-dashboard',
+  //   imageUrl: placeholderImage,
+  //   projectUrl: 'https://iot.kronosoft.com',
+  //   codeUrl: 'https://github.com/kronosoft/iot-dashboard',
+  //   tags: ['Angular', 'MQTT', 'InfluxDB'],
+  //   category: 'IoT',
+  //   date: '2024-03-08',
+  //   galleryImages: [
+  //     {
+  //       id: 'iotGallery1',
+  //       src: placeholderImage,
+  //     },
+  //     {
+  //       id: 'iotGallery2',
+  //       src: placeholderImage,
+  //     },
+  //   ],
+  //   keyFeatures: [
+  //     { id: 'realTimeMonitoring' },
+  //     { id: 'deviceControl' },
+  //   ],
+  //   technologiesUsed: [
+  //     { id: 'angular', name: 'Angular' },
+  //     { id: 'mqtt', name: 'MQTT' },
+  //   ],
+  // }
 ];
 
 export const projectsList = [...projectsListUnsorted].sort((a, b) => {
