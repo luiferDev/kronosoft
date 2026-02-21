@@ -2,8 +2,6 @@
 @import 'tw-animate-css';
 @plugin "@tailwindcss/typography";
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-
 @custom-variant dark (&:is(.dark *));
 
 /* Custom Font - Luxomona */
@@ -49,7 +47,7 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  --font-sans: 'Luxomona', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Luxomona', 'Roboto', ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, monospace;
   --font-serif: ui-serif, serif;
 
