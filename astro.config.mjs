@@ -9,6 +9,7 @@ import { remarkReadingTime } from './src/lib/remark-reading-time.mjs';
 import rehypeMermaid from 'rehype-mermaid';
 
 import vercel from '@astrojs/vercel';
+import sitemap from '@astrojs/sitemap';
 
 // Use different strategies based on environment
 const isProduction = process.env.NODE_ENV === 'production';
@@ -21,9 +22,14 @@ console.log(`Using Mermaid strategy: ${mermaidStrategy}`);
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com', // IMPORTANT: Replace with your actual domain in production
+  site: 'https://kronosoft.vercel.app',
   integrations: [
     react(),
+    sitemap({
+      changefreq: 'weekly',
+      priority: 0.7,
+      lastmod: new Date(),
+    }),
     mdx({
       remarkPlugins: [remarkReadingTime],
       rehypePlugins: [
@@ -55,8 +61,8 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
     optimizeDeps: {
-      include: ['three']
-    }
+      include: ['three'],
+    },
   },
 
   adapter: vercel(),
