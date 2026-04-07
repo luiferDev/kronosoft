@@ -7,9 +7,13 @@ const tFooter = useTranslations(lang, 'footer');
 const tSite = useTranslations(lang, 'site');
 ---
 
-<footer class="py-6 mt-auto text-center text-sm text-muted-foreground">
+<footer class="py-8 mt-auto text-center text-sm border-t border-border/30">
   <div class="container mx-auto px-4">
-    &copy; {new Date().getFullYear()}
-    {tSite('title')}. {tFooter('rights')}
+    <div class="relative inline-block">
+      <span class="text-muted-foreground">
+        &copy; {new Date().getFullYear()} {tSite('title')}. {tFooter('rights')}
+      </span>
+      <div class="absolute -inset-2 bg-gradient-to-r from-transparent via-primary/20 to-transparent blur-sm -z-10" />
+    </div>
   </div>
 </footer>

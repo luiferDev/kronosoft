@@ -8,12 +8,14 @@ const currentLocale =
   (Astro.currentLocale as LanguageCode | undefined) ?? defaultLanguage;
 ---
 
-<a href={getRelativeLocaleUrl(currentLocale)}>
+<a href={getRelativeLocaleUrl(currentLocale)} class="relative group">
   <Image
     src={logo}
     alt="KronoSoft logo"
     width={176}
     height={44}
-    class="w-44 h-auto"
+    class="w-44 h-auto transition-all duration-300 group-hover:scale-105"
   />
+  {/* Glow effect for dark mode */}
+  <div class="absolute inset-0 -inset-y-2 bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 dark:block hidden" />
 </a>

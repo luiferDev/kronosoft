@@ -180,7 +180,10 @@ const socialImageURL = ogImage || defaultOgImage;
       defer></script>
     <ClientRouter />
   </head>
-  <body class="h-[100dvh] bg-background font-sans antialiased flex flex-col">
+  <body class="h-[100dvh] bg-background font-sans antialiased flex flex-col relative overflow-x-hidden">
+    {/* Cyberpunk ambient glow background */}
+    <div class="fixed inset-0 bg-radial-glow pointer-events-none -z-20" />
+    <div class="fixed inset-0 bg-cyber-gradient dark:bg-cyber-gradient-light opacity-50 dark:opacity-30 pointer-events-none -z-30" />
     {/* Tailwind classes for the body */}
     <header class="hidden md:block">
       <!-- passer aussi navItems mais sans le premier element dont le href === '/' -->
