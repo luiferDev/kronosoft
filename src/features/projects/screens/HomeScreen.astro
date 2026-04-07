@@ -26,7 +26,7 @@ export type Props = {
   featuredProjectsDescription: string;
   mySkillsTitle: string;
   mySkillsDescription: string;
-  projectPreviewCtaText: string; // Added for specific project CTA
+  projectPreviewCtaText: string;
 };
 
 const {
@@ -48,25 +48,33 @@ const {
 } = Astro.props;
 ---
 
-<section class="py-12 md:py-16">
+<section class="py-12 md:py-16 relative">
+  {/* Decorative cyberpunk elements */}
+  <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10" />
+  <div class="absolute bottom-0 left-20 w-48 h-48 bg-neon-cyan/5 rounded-full blur-3xl -z-10" />
+  
   <div class="grid md:grid-cols-2 gap-12 items-center justify-between">
     {/* Hero Text Column */}
     <div class="text-center md:text-left">
       <h1
-        class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4"
+        class="hero-title text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 relative"
       >
-        {heroGreeting}
+        <span class="relative">
+          {heroGreeting}
+          {/* Glow underline effect */}
+          <span class="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50" />
+        </span>
       </h1>
-      <p class="text-2xl md:text-3xl font-medium text-muted-foreground mb-2">
-        <span>{heroSubtitlePart1}</span>
-        <span class="text-primary"> | </span>
+      <p class="hero-subtitle text-2xl md:text-3xl font-medium text-muted-foreground mb-2">
+        <span class="text-primary">{heroSubtitlePart1}</span>
+        <span class="mx-2 text-muted-foreground/50">|</span>
         <span>{heroSubtitlePart2}</span>
       </p>
-      <p class="text-lg text-muted-foreground mb-8">
+      <p class="hero-intro text-lg text-muted-foreground mb-8">
         {heroIntroduction}
       </p>
       <div
-        class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+        class="hero-buttons flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
       >
         <a
           href="/projects"
@@ -85,10 +93,14 @@ const {
       </div>
     </div>
 
-    {/* Hero Image (Placeholder for now) */}
-    <div class="md:text-center">
+    {/* Hero Image with cyberpunk frame */}
+    <div class="md:text-center relative">
+      {/* Frame effect */}
+      <div class="absolute -inset-4 border border-primary/30 rounded-lg" />
+      <div class="absolute -inset-2 border border-primary/10 rounded-lg rotate-1" />
+      
       <div
-        class="md:w-[600px] w-full h-92 bg-muted rounded-lg shadow-xl overflow-hidden"
+        class="hero-image md:w-[600px] w-full h-92 bg-muted rounded-lg shadow-xl overflow-hidden relative"
       >
         <Image
           src={heroImage}
@@ -100,10 +112,176 @@ const {
           class="h-full w-full object-cover"
           style="object-position: center 28%;"
         />
+        {/* Scanline overlay effect */}
+        <div class="absolute inset-0 bg-scanlines pointer-events-none opacity-10" />
       </div>
     </div>
   </div>
 </section>
+
+{/* Featured Projects Section */}
+<section id="projects" class="py-12 md:py-16 bg-muted/20 dark:bg-muted/5 relative">
+  {/* Section decorations */}
+  <div class="absolute top-10 left-0 w-20 h-[1px] bg-gradient-to-r from-primary to-transparent" />
+  <div class="absolute bottom-10 right-0 w-20 h-[1px] bg-gradient-to-l from-primary to-transparent" />
+  
+  <Heading
+    title={featuredProjectsTitle}
+    description={featuredProjectsDescription}
+    className="flex flex-col items-center"
+  />
+
+  <div class="featured-projects grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {
+      projects.slice(0, 3).map((project: TranslatedProject, index: number) => (
+        <div class="stagger-card" style={`animation-delay: ${index * 0.1}s`}>
+          <FeaturedProjectPreview
+            lang={lang}
+            slug={project.slug}
+            title={project.title}
+            imageUrl={project.imageUrl}
+            imageAltText={project.imageAltText}
+            ctaText={projectPreviewCtaText}
+          />
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+{/* Skills Section */}
+<section id="skills" class="py-12 md:py-16 relative">
+  <div class="absolute -left-32 top-1/2 w-64 h-64 bg-neon-cyan/5 rounded-full blur-3xl -z-10" />
+  <div class="container mx-auto px-4">
+    <Heading
+      title={mySkillsTitle}
+      description={mySkillsDescription}
+      className="flex flex-col items-center"
+    />
+    <div class="skills-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        skills.map((skill, index: number) => (
+          <div class="stagger-card" style={`animation-delay: ${index * 0.1}s`}>
+            <SkillCard
+              title={skill.title}
+              description={skill.description}
+              iconName={skill.iconName}
+              technologies={skill.technologies}
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+{/* GSAP Animations Script */}
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  
+  gsap.registerPlugin(ScrollTrigger);
+  
+  // Check reduced motion
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  
+  if (!prefersReducedMotion) {
+    // Hero animations - Elegant entrance
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    
+    tl.fromTo('.hero-title', 
+      { opacity: 0, y: 50, scale: 0.95 },
+      { opacity: 1, y: 0, scale: 1, duration: 1.2 }
+    )
+    .fromTo('.hero-subtitle',
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.8 },
+      '-=0.6'
+    )
+    .fromTo('.hero-intro',
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 0.6 },
+      '-=0.4'
+    )
+    .fromTo('.hero-buttons',
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 0.6 },
+      '-=0.3'
+    )
+    .fromTo('.hero-image',
+      { opacity: 0, scale: 0.9, rotation: -2 },
+      { opacity: 1, scale: 1, rotation: 0, duration: 1, ease: 'power4.out' },
+      '-=1'
+    );
+    
+    // Floating animation for hero elements
+    gsap.to('.hero-title span', {
+      textShadow: '0 0 30px rgba(0, 240, 255, 0.5)',
+      duration: 2,
+      repeat: -1,
+      yoyo: true,
+      ease: 'sine.inOut'
+    });
+    
+    // Scroll-triggered animations for cards
+    gsap.utils.toArray('.stagger-card').forEach((card: any, i: number) => {
+      gsap.fromTo(card,
+        { opacity: 0, y: 50, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.8,
+          delay: i * 0.1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 85%',
+            toggleActions: 'play none none reverse'
+          }
+        }
+      );
+    });
+    
+    // Parallax decoration
+    gsap.to('.bg-muted\\/20', {
+      y: -30,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '#projects',
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true
+      }
+    });
+  } else {
+    // Fallback for reduced motion - just fade in
+    gsap.set(['.hero-title', '.hero-subtitle', '.hero-intro', '.hero-buttons', '.hero-image', '.stagger-card'], { opacity: 1 });
+  }
+</script>
+
+<style>
+  /* Scanline effect */
+  .bg-scanlines {
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.1) 2px,
+      rgba(0, 0, 0, 0.1) 4px
+    );
+  }
+  
+  /* Floating animation for elements */
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+  }
+  
+  .stagger-card {
+    opacity: 0; /* Initial state for GSAP */
+  }
+</style>
 
 {/* Featured Projects Section */}
 <section id="projects" class="py-12 md:py-16 bg-muted/20 dark:bg-muted/10">

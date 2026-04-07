@@ -107,26 +107,24 @@ const IconComponent = iconComponents[iconName];
 ---
 
 <Card
-  className="flex flex-col h-full hover:shadow-lg transition-shadow duration-300 gap-3 pt-2"
+  className="skill-card flex flex-col h-full gap-3 pt-2 relative overflow-hidden group"
 >
-  <CardHeader className="pb-3 pt-4">
-    {/* Adjusted padding for consistency */}
-    {/* User's modified header structure - ensure it's correctly aligned */}
-    {/* CardTitle itself is not a flex container, the div inside it is. */}
+  {/* Glow effect on hover */}
+  <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+  <div class="absolute -inset-px border border-transparent group-hover:border-primary/30 rounded-xl transition-colors duration-300" />
+  
+  <CardHeader className="pb-3 pt-4 relative">
     <div class="flex items-start">
-      {/* This div will be the flex container for icon and title text block */}
       <div class="mr-4 flex-shrink-0">
-        {/* Icon container */}
         <span
-          class="inline-flex items-center justify-center p-2 bg-primary/10 rounded-lg"
+          class="inline-flex items-center justify-center p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors duration-300"
         >
-          <IconComponent className="size-5 text-primary" />
+          <IconComponent className="size-5 text-primary group-hover:text-glow-cyan transition-all duration-300" />
         </span>
       </div>
       <div class="flex-grow">
-        {/* Title block, allows title to wrap */}
         <CardTitle
-          className="text-lg font-semibold group-hover:text-primary transition-colors"
+          className="text-lg font-semibold group-hover:text-primary transition-colors duration-300"
         >
           {title}
         </CardTitle>
@@ -134,11 +132,7 @@ const IconComponent = iconComponents[iconName];
     </div>
   </CardHeader>
 
-  <CardContent className="flex-grow pt-2 pb-3">
-    {/* flex-grow pushes footer down, padding adjusted */}
-    {
-      /* Description text indented to align with title. Calculation: icon div's mr-4 (1rem) + icon span's effective width (approx 2.25rem) = 3.25rem */
-    }
+  <CardContent className="flex-grow pt-2 pb-3 relative">
     <p class="text-sm text-muted-foreground line-clamp-3 pl-[3.25rem]">
       {description}
     </p>
@@ -146,14 +140,18 @@ const IconComponent = iconComponents[iconName];
 
   {
     technologies && technologies.length > 0 && (
-      <CardFooter className="pt-3 pb-4 flex flex-wrap gap-x-3 gap-y-2 justify-start items-center">
+      <CardFooter className="pt-3 pb-4 flex flex-wrap gap-x-3 gap-y-2 justify-start items-center relative">
         {technologies.map((tech) => {
           const TechIcon = techIconComponents[tech.id.toLowerCase()];
           return TechIcon ? (
-            <TechIcon
-              className="size-5 text-muted-foreground hover:text-primary transition-colors"
+            <span
+              class="inline-flex items-center transition-all duration-300 hover:scale-110"
               title={tech.name}
-            />
+            >
+              <TechIcon
+                className="size-5 text-muted-foreground/60 hover:text-primary transition-colors cursor-pointer"
+              />
+            </span>
           ) : null;
         })}
       </CardFooter>
