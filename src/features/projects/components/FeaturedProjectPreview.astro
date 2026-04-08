@@ -65,62 +65,74 @@ const projectUrl = getRelativeLocaleUrl(lang, `/projects/${slug}`);
     const preview = document.querySelector('.featured-project-preview');
     if (!preview || typeof gsap === 'undefined') return;
 
+    // Clean up any existing listeners to prevent duplicates
+    preview.replaceWith(preview.cloneNode(true));
+    
+    // Get the new element after clone
+    const newPreview = document.querySelector('.featured-project-preview');
+    if (!newPreview) return;
+    
+    // Store tweens for cleanup
+    const tweens: any[] = [];
+
     // Enhance the hover effect with GSAP
-    preview.addEventListener('mouseenter', () => {
-      gsap.to(preview, {
+    newPreview.addEventListener('mouseenter', () => {
+      const t1 = gsap.to(newPreview, {
         scale: 1.02,
         duration: 0.4,
         ease: 'power3.out',
       });
+      tweens.push(t1);
 
-      // Animate the title
-      const title = preview.querySelector('h3');
+      const title = newPreview.querySelector('h3');
       if (title) {
-        gsap.to(title, {
+        const t2 = gsap.to(title, {
           y: -4,
           duration: 0.3,
           ease: 'power2.out',
         });
+        tweens.push(t2);
       }
 
-      // Animate the CTA button
-      const ctaDiv = preview.querySelector('.flex.items-center');
+      const ctaDiv = newPreview.querySelector('.flex.items-center');
       if (ctaDiv) {
-        gsap.to(ctaDiv, {
+        const t3 = gsap.to(ctaDiv, {
           opacity: 1,
           y: 0,
           duration: 0.3,
           ease: 'power2.out',
         });
+        tweens.push(t3);
       }
     });
 
-    preview.addEventListener('mouseleave', () => {
-      gsap.to(preview, {
+    newPreview.addEventListener('mouseleave', () => {
+      const t1 = gsap.to(newPreview, {
         scale: 1,
         duration: 0.4,
         ease: 'power3.out',
       });
+      tweens.push(t1);
 
-      // Reset title position
-      const title = preview.querySelector('h3');
+      const title = newPreview.querySelector('h3');
       if (title) {
-        gsap.to(title, {
+        const t2 = gsap.to(title, {
           y: 0,
           duration: 0.3,
           ease: 'power2.out',
         });
+        tweens.push(t2);
       }
 
-      // Reset CTA button
-      const ctaDiv = preview.querySelector('.flex.items-center');
+      const ctaDiv = newPreview.querySelector('.flex.items-center');
       if (ctaDiv) {
-        gsap.to(ctaDiv, {
+        const t3 = gsap.to(ctaDiv, {
           opacity: 0.5,
           y: 4,
           duration: 0.3,
           ease: 'power2.out',
         });
+        tweens.push(t3);
       }
     });
   };
@@ -136,4 +148,14 @@ const projectUrl = getRelativeLocaleUrl(lang, `/projects/${slug}`);
       enhanceFeaturedProjectHover();
     }
   }
+  
+  // Re-run after Astro view transitions
+  document.addEventListener('astro:after-swap', enhanceFeaturedProjectHover);
+  
+  // Clean up before navigation
+  document.addEventListener('astro:before-preparation', () => {
+    if (typeof gsap !== 'undefined') {
+      gsap.killTweensOf('.featured-project-preview');
+    }
+  });
 </script>

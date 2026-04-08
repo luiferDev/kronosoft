@@ -307,11 +307,8 @@ const {
     );
   }
 
-  // Clean up on navigation
-  document.addEventListener('astro:before-preparation', () => {
-    ScrollTrigger.getAll().forEach((t: any) => t.kill());
-    gsap.killTweensOf('*');
-  });
+  // Fallback for reduced motion or GSAP failures - ensure cards are visible
+  gsap.set('.stagger-card', { opacity: 1, clearProps: 'all' });
 </script>
 
 <style>
