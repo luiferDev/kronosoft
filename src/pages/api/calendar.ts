@@ -6,16 +6,16 @@ export const prerender = false;
 
 export const POST: APIRoute = async ({ request }) => {
   try {
-    const { 
-      summary, 
-      description, 
-      startDateTime, 
-      endDateTime, 
-      attendeeEmail, 
+    const {
+      summary,
+      description,
+      startDateTime,
+      endDateTime,
+      attendeeEmail,
       attendeeName,
       firstName,
       lastName,
-      message 
+      message,
     } = await request.json();
 
     // Crear evento en Google Calendar

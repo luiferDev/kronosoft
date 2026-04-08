@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import { useEffect, useRef } from 'react';
 
 interface GalleryImage {
   src: string;
@@ -20,8 +21,88 @@ interface ProjectGalleryProps {
 }
 
 export default function ProjectGallery({ images }: ProjectGalleryProps) {
+  const galleryRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const enhanceGalleryHover = () => {
+      if (!galleryRef.current || typeof gsap === 'undefined') return;
+
+      // Enhance carousel navigation buttons
+      const navButtons = galleryRef.current.querySelectorAll(
+        '.CarouselPrevious, .CarouselNext'
+      );
+      navButtons.forEach((button) => {
+        button.addEventListener('mouseenter', () => {
+          gsap.to(button, {
+            scale: 1.2,
+            duration: 0.3,
+            ease: 'power2.out',
+          });
+        });
+
+        button.addEventListener('mouseleave', () => {
+          gsap.to(button, {
+            scale: 1,
+            duration: 0.3,
+            ease: 'power2.out',
+          });
+        });
+      });
+
+      // Enhance carousel items
+      const carouselItems =
+        galleryRef.current.querySelectorAll('.CarouselItem');
+      carouselItems.forEach((item, index) => {
+        item.addEventListener('mouseenter', () => {
+          gsap.to(item, {
+            scale: 1.03,
+            duration: 0.4,
+            ease: 'power2.out',
+          });
+
+          // Animate the card inside
+          const card = item.querySelector('Card');
+          if (card) {
+            gsap.to(card, {
+              y: -4,
+              duration: 0.3,
+              ease: 'power2.out',
+            });
+          }
+        });
+
+        item.addEventListener('mouseleave', () => {
+          gsap.to(item, {
+            scale: 1,
+            duration: 0.4,
+            ease: 'power2.out',
+          });
+
+          // Reset card position
+          const card = item.querySelector('Card');
+          if (card) {
+            gsap.to(card, {
+              y: 0,
+              duration: 0.3,
+              ease: 'power2.out',
+            });
+          }
+        });
+      });
+    };
+
+    // Run after component mounts
+    if (typeof document !== 'undefined') {
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', enhanceGalleryHover);
+      } else {
+        enhanceGalleryHover();
+      }
+    }
+  }, []);
+
   return (
-    <div className="relative max-w-3xl mx-auto">
+    <div className="relative max-w-3xl mx-auto" ref={galleryRef}>
       <Carousel
         className="w-full md:ml-12"
         opts={{

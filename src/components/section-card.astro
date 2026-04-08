@@ -86,3 +86,56 @@ const {
     )
   }
 </Card>
+
+<script is:inline>
+  const enhanceSectionCardHover = () => {
+    const card = document.querySelector('.section-card');
+    if (!card || typeof gsap === 'undefined') return;
+
+    // Scale up slightly on hover
+    card.addEventListener('mouseenter', () => {
+      gsap.to(card, {
+        scale: 1.02,
+        duration: 0.3,
+        ease: 'power2.out',
+      });
+    });
+
+    card.addEventListener('mouseleave', () => {
+      gsap.to(card, {
+        scale: 1,
+        duration: 0.3,
+        ease: 'power2.out',
+      });
+    });
+
+    // Animate any images on hover
+    const image = card.querySelector('img');
+    if (image) {
+      image.addEventListener('mouseenter', () => {
+        gsap.to(image, {
+          scale: 1.05,
+          duration: 0.4,
+          ease: 'power2.out',
+        });
+      });
+
+      image.addEventListener('mouseleave', () => {
+        gsap.to(image, {
+          scale: 1,
+          duration: 0.4,
+          ease: 'power2.out',
+        });
+      });
+    }
+  };
+
+  // Run after component mounts
+  if (typeof document !== 'undefined') {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', enhanceSectionCardHover);
+    } else {
+      enhanceSectionCardHover();
+    }
+  }
+</script>

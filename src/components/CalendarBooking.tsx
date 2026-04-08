@@ -41,7 +41,7 @@ export function CalendarBooking() {
 
   const onSubmit = async (data: BookingFormData) => {
     setIsSubmitting(true);
-    
+
     try {
       const startDateTime = new Date(`${data.date}T${data.time}`).toISOString();
       const endDateTime = new Date(
@@ -69,7 +69,9 @@ export function CalendarBooking() {
       const result = await response.json();
 
       if (result.status === 'success') {
-        toast.success('¡Cita agendada exitosamente! Recibirás un email de confirmación.');
+        toast.success(
+          '¡Cita agendada exitosamente! Recibirás un email de confirmación.'
+        );
         form.reset();
       } else {
         toast.error(result.message || 'Error al agendar la cita');
@@ -162,11 +164,7 @@ export function CalendarBooking() {
               <Clock className="inline h-4 w-4 mr-1" />
               Hora
             </Label>
-            <Input
-              id="time"
-              type="time"
-              {...form.register('time')}
-            />
+            <Input id="time" type="time" {...form.register('time')} />
             {form.formState.errors.time && (
               <p className="text-sm text-red-500 mt-1">
                 {form.formState.errors.time.message}
@@ -221,11 +219,7 @@ export function CalendarBooking() {
           )}
         </div>
 
-        <Button
-          type="submit"
-          className="w-full"
-          disabled={isSubmitting}
-        >
+        <Button type="submit" className="w-full" disabled={isSubmitting}>
           {isSubmitting ? (
             <>
               <Clock className="mr-2 h-4 w-4 animate-spin" />

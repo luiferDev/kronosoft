@@ -1,9 +1,9 @@
 // Import i18n utilities
 import { ui, defaultLanguage, type LanguageCode } from '@/i18n/ui';
 import placeholderImage from '@/assets/placeholder.webp';
-import zorvanz from '@/assets/zorvanz-hero.webp'
-import ambualert from '@/assets/ambualer-hero.png'
-import codigo from '@/assets/codigo-hero.png'
+import zorvanz from '@/assets/zorvanz-hero.webp';
+import ambualert from '@/assets/ambualer-hero.png';
+import codigo from '@/assets/codigo-hero.png';
 import type {
   ProjectData,
   SkillData,
@@ -31,10 +31,7 @@ const projectsListUnsorted: Array<ProjectData> = [
         src: placeholderImage,
       },
     ],
-    keyFeatures: [
-      { id: 'responsiveDesign' },
-      { id: 'contentManagement' },
-    ],
+    keyFeatures: [{ id: 'responsiveDesign' }, { id: 'contentManagement' }],
     technologiesUsed: [
       { id: 'React', name: 'React' },
       { id: 'typescript', name: 'TypeScript' },
@@ -60,10 +57,7 @@ const projectsListUnsorted: Array<ProjectData> = [
         src: placeholderImage,
       },
     ],
-    keyFeatures: [
-      { id: 'paymentIntegration' },
-      { id: 'inventoryManagement' },
-    ],
+    keyFeatures: [{ id: 'paymentIntegration' }, { id: 'inventoryManagement' }],
     technologiesUsed: [
       { id: 'react', name: 'React' },
       { id: 'nodejs', name: 'Node.js' },
@@ -89,10 +83,7 @@ const projectsListUnsorted: Array<ProjectData> = [
         src: placeholderImage,
       },
     ],
-    keyFeatures: [
-      { id: 'realTimeSync' },
-      { id: 'offlineMode' },
-    ],
+    keyFeatures: [{ id: 'realTimeSync' }, { id: 'offlineMode' }],
     technologiesUsed: [
       { id: 'vue', name: 'Vue.js' },
       { id: 'firebase', name: 'Firebase' },
@@ -435,7 +426,7 @@ export const skillsList: Array<SkillData> = [
       { id: 'css', name: 'CSS' },
       { id: 'javascript', name: 'JavaScript' },
       { id: 'typescript', name: 'TypeScript' },
-      { id: 'react', name: 'React' }
+      { id: 'react', name: 'React' },
     ],
   },
   {
@@ -445,7 +436,7 @@ export const skillsList: Array<SkillData> = [
       { id: 'nodejs', name: 'Node.js' },
       { id: 'restapi', name: 'REST APIs' },
       { id: 'graphql', name: 'GraphQL' },
-      { id: '.NET', name: '.NET' }
+      { id: '.NET', name: '.NET' },
     ],
   },
   {

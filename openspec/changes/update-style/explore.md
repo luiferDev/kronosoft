@@ -1,6 +1,7 @@
 # Kronosoft Codebase Exploration - update-style
 
 ## Overview
+
 Comprehensive exploration of the Kronosoft Astro portfolio/blog codebase for the "update-style" redesign.
 
 ---
@@ -8,19 +9,21 @@ Comprehensive exploration of the Kronosoft Astro portfolio/blog codebase for the
 ## 1. Page Structure (src/pages/)
 
 ### Spanish (default locale) - 9 pages
-| Page | Path | Purpose |
-|------|------|---------|
-| Home | `/` | Main portfolio screen |
-| Blog | `/blog` | Blog listing |
-| Blog Post | `/blog/[...slug]` | Individual blog post |
-| Projects | `/projects` | Projects listing |
-| Project Detail | `/projects/[slug]` | Individual project |
-| Tips | `/tips` | Tips listing |
-| Tip Detail | `/tips/[...slug]` | Individual tip |
-| Contact | `/contact` | Contact form |
-| 404 | `/404` | Not found page |
+
+| Page           | Path               | Purpose               |
+| -------------- | ------------------ | --------------------- |
+| Home           | `/`                | Main portfolio screen |
+| Blog           | `/blog`            | Blog listing          |
+| Blog Post      | `/blog/[...slug]`  | Individual blog post  |
+| Projects       | `/projects`        | Projects listing      |
+| Project Detail | `/projects/[slug]` | Individual project    |
+| Tips           | `/tips`            | Tips listing          |
+| Tip Detail     | `/tips/[...slug]`  | Individual tip        |
+| Contact        | `/contact`         | Contact form          |
+| 404            | `/404`             | Not found page        |
 
 ### English locale - 9 pages
+
 Same structure under `/en/` prefix.
 
 **Total: 18 pages**
@@ -30,6 +33,7 @@ Same structure under `/en/` prefix.
 ## 2. Components
 
 ### Main Components (src/components/)
+
 - `Header.astro` - Sticky header with nav, logo, language selector, theme toggle
 - `Footer.astro` - Simple copyright footer
 - `BottomAppBar.astro` - Mobile navigation bar
@@ -44,6 +48,7 @@ Same structure under `/en/` prefix.
 - `EmptyState.tsx` - Empty state placeholder
 
 ### shadcn/ui Components (src/components/ui/) - 27 components
+
 - button.tsx
 - input.tsx
 - textarea.tsx
@@ -75,8 +80,10 @@ Same structure under `/en/` prefix.
 - sonner.tsx (toast notifications)
 - calendar.tsx
 
-### Feature Components (src/features/*/components/)
+### Feature Components (src/features/\*/components/)
+
 **Blog:**
+
 - `BlogPostCard.astro`
 - `BlogFilters.tsx`
 - `FilteredPostsList.tsx`
@@ -85,16 +92,20 @@ Same structure under `/en/` prefix.
 - `StackBlitzEmbed.astro`
 
 **Projects:**
+
 - `FeaturedProjectPreview.astro`
 - `ProjectGallery.tsx`
 
 **Tips:**
+
 - `TipCard.astro`
 
 **Contact:**
+
 - `ContactForm.tsx`
 
-### Screen Components (src/features/*/screens/)
+### Screen Components (src/features/\*/screens/)
+
 - `HomeScreen.astro`
 - `AllBlogPostsScreen.astro`
 - `BlogPostDetailScreen.astro`
@@ -112,6 +123,7 @@ Same structure under `/en/` prefix.
 **File:** `src/styles/global.css`
 
 #### Color Tokens (Light Mode)
+
 ```
 --background: #cccccc
 --foreground: #000000
@@ -133,6 +145,7 @@ Same structure under `/en/` prefix.
 ```
 
 #### Color Tokens (Dark Mode)
+
 ```
 --background: #000000
 --foreground: #ffffff
@@ -154,12 +167,14 @@ Same structure under `/en/` prefix.
 ```
 
 #### Typography
+
 - **Headings:** Luxomona (custom font from `/fonts/luxomona.otf`)
 - **Body:** Roboto
 - **Code:** System monospace
 - **Base font:** `--font-sans`
 
 #### Spacing
+
 - Uses Tailwind CSS 4 standard spacing
 - Radius: `--radius: 0.5rem`
 - Shadows: multiple levels (2xs, xs, sm, md, lg, xl, 2xl)
@@ -169,6 +184,7 @@ Same structure under `/en/` prefix.
 ## 4. Layout Structure
 
 ### BaseLayout (src/layouts/BaseLayout.astro)
+
 - HTML shell with SEO meta tags
 - Favicons (light/dark mode)
 - Theme initialization script
@@ -183,16 +199,19 @@ Same structure under `/en/` prefix.
 ## 5. Animation Approach
 
 ### CURRENT STATE: **NO GSAP USAGE**
+
 - GSAP is installed in dependencies but NOT used anywhere
 - Only CSS transitions are present
 
 ### Existing Transitions
+
 - **hover:shadow-lg** - Card hover effects
 - **transition-colors**, **transition-all**, **transition-transform** - Various CSS transitions
 - **duration-200/300/500** - Transition timing
 - Astro **ClientRouter** - Built-in page transitions
 
 ### Examples in Code
+
 ```astro
 class="hover:shadow-xl transition-shadow duration-300"
 class="group-hover:scale-105 transition-transform duration-300"
@@ -204,18 +223,22 @@ class="transition-colors duration-200"
 ## 6. i18n Configuration
 
 ### Supported Languages
+
 - Spanish (es) - default
 - English (en)
 
 ### Routing
+
 - `prefixDefaultLocale: false` - No prefix for Spanish
 - English uses `/en/` prefix
 
 ### Translation Files
+
 - `src/i18n/ui.ts` - Complete UI translations (1350+ lines)
 - `src/i18n/zodErrorMap.ts` - Form validation errors
 
 ### Structure
+
 - Site metadata
 - Navigation labels
 - Page-specific content (homePage, blogPage, contactPage, etc.)
@@ -228,7 +251,9 @@ class="transition-colors duration-200"
 ## 7. Content Structure
 
 ### Blog Posts (MDX)
+
 Location: `src/features/blog/content/`
+
 - `es/software-a-medida-empresas.mdx`
 - `es/ejemplo-articulo.mdx`
 - `es/vibe-coding-sin-fundamentos.mdx`
@@ -237,16 +262,20 @@ Location: `src/features/blog/content/`
 - `en/example-post.mdx`
 
 ### Tips (MDX)
+
 Location: `src/features/tips/content/`
+
 - `es/ejemplo-consejo.mdx`
 - `en/example-tip.mdx`
 
 ### Projects
+
 - **NOT in content collections** - hardcoded in `src/i18n/ui.ts`
 - 15 projects defined with full details
 - Includes: title, description, images, features, gallery
 
 ### Skills
+
 - **Hardcoded in ui.ts** - 6 skills
 - Frontend, Backend, UI/UX, DevOps, IA, Mobile
 
@@ -254,23 +283,24 @@ Location: `src/features/tips/content/`
 
 ## 8. Tech Stack Summary
 
-| Category | Technology |
-|----------|-------------|
-| Framework | Astro 5.8.1 |
-| UI | React 19 |
-| Styling | Tailwind CSS 4 |
+| Category   | Technology                   |
+| ---------- | ---------------------------- |
+| Framework  | Astro 5.8.1                  |
+| UI         | React 19                     |
+| Styling    | Tailwind CSS 4               |
 | Components | shadcn/ui (Radix primitives) |
-| Animation | GSAP installed but unused |
-| i18n | Spanish + English |
-| Content | MDX files |
-| Deployment | Vercel adapter |
-| Fonts | Luxomona (custom), Roboto |
+| Animation  | GSAP installed but unused    |
+| i18n       | Spanish + English            |
+| Content    | MDX files                    |
+| Deployment | Vercel adapter               |
+| Fonts      | Luxomona (custom), Roboto    |
 
 ---
 
 ## 9. Design Observations for Redesign
 
 ### Strengths
+
 - Clean page structure
 - Good component organization
 - i18n already configured
@@ -278,6 +308,7 @@ Location: `src/features/tips/content/`
 - Responsive design (mobile + desktop nav)
 
 ### Weaknesses (Redesign Opportunities)
+
 1. **No GSAP animations** - despite library installed
 2. **Basic blue primary color** - no real brand identity
 3. **Hardcoded projects** - should be content collections
@@ -286,6 +317,7 @@ Location: `src/features/tips/content/`
 6. **Generic design** - needs cyberpunk/futuristic vibe
 
 ### Recommended Improvements
+
 - Add GSAP animations throughout
 - Define real brand colors (neon accents, cyberpunk palette)
 - Move projects to content collections
@@ -342,6 +374,7 @@ src/
 ## Next Steps (for orchestrator)
 
 This exploration reveals:
+
 1. **Green light for GSAP** - library is installed but completely unused
 2. **Major redesign opportunity** - from generic to cyberpunk aesthetic
 3. **Content migration needed** - projects should be content collections

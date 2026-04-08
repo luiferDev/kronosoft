@@ -17,14 +17,34 @@ import { Calendar, ChevronRight } from 'lucide-react';
 interface Props {
   tip: CollectionEntry<'tips'>;
   lang: LanguageCode;
+  className?: string;
 }
 
-const { tip, lang } = Astro.props;
+const { tip, lang, className } = Astro.props;
 const t = useTranslations(lang, 'tipsPage');
 ---
 
 <Card
-  className="group bg-card border border-border/50 rounded-xl hover:shadow-lg hover:border-primary/20 transition-all duration-300 grid grid-rows-subgrid row-span-2 h-full relative overflow-hidden"
+  className={[
+    'group',
+    'bg-card',
+    'border',
+    'border-border/50',
+    'rounded-xl',
+    'hover:shadow-lg',
+    'hover:border-primary/20',
+    'transition-all',
+    'duration-300',
+    'grid',
+    'grid-rows-subgrid',
+    'row-span-2',
+    'h-full',
+    'relative',
+    'overflow-hidden',
+    className,
+  ]
+    .filter(Boolean)
+    .join(' ')}
 >
   <!-- Badge TIP -->
   <div class="absolute top-4 right-4 z-10">
@@ -97,4 +117,58 @@ const t = useTranslations(lang, 'tipsPage');
     class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-xl"
   >
   </div>
+
+  <!-- GSAP Hover Enhancement -->
+  <script is:inline>
+    const enhanceTipCardHover = () => {
+      const card = document.querySelector('.tip-card');
+      if (!card || typeof gsap === 'undefined') return;
+
+      // Scale up slightly on hover
+      card.addEventListener('mouseenter', () => {
+        gsap.to(card, {
+          scale: 1.02,
+          duration: 0.3,
+          ease: 'power2.out',
+        });
+      });
+
+      card.addEventListener('mouseleave', () => {
+        gsap.to(card, {
+          scale: 1,
+          duration: 0.3,
+          ease: 'power2.out',
+        });
+      });
+
+      // Animate the chevron on hover
+      const chevron = card.querySelector('.ChevronRight');
+      if (chevron) {
+        chevron.addEventListener('mouseenter', () => {
+          gsap.to(chevron, {
+            rotation: 90,
+            duration: 0.3,
+            ease: 'power2.out',
+          });
+        });
+
+        chevron.addEventListener('mouseleave', () => {
+          gsap.to(chevron, {
+            rotation: 0,
+            duration: 0.3,
+            ease: 'power2.out',
+          });
+        });
+      }
+    };
+
+    // Run after component mounts
+    if (typeof document !== 'undefined') {
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', enhanceTipCardHover);
+      } else {
+        enhanceTipCardHover();
+      }
+    }
+  </script>
 </Card>

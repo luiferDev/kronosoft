@@ -1,16 +1,14 @@
 ---
-title: "¿Vibe Coding sin Saber Programar? Por Qué Podría Arruinar tu Aplicación"
-description: "Descubre por qué el vibe coding sin fundamentos de programación puede comprometer seriamente el rendimiento y la calidad de tu aplicación."
+title: '¿Vibe Coding sin Saber Programar? Por Qué Podría Arruinar tu Aplicación'
+description: 'Descubre por qué el vibe coding sin fundamentos de programación puede comprometer seriamente el rendimiento y la calidad de tu aplicación.'
 pubDate: 2025-02-19
 heroImage:
-  url: "@/assets/placeholder.webp"
-  alt: "Desarrollador confundido frente a código generado por IA"
-tags: ["programación", "IA", "mejores-prácticas", "desarrollo-web"]
+  url: '@/assets/placeholder.webp'
+  alt: 'Desarrollador confundido frente a código generado por IA'
+tags: ['programación', 'IA', 'mejores-prácticas', 'desarrollo-web']
 relatedPosts: []
 isDraft: false
 ---
-
-
 
 # ¿Vibe Coding sin Saber Programar? Por Qué Podría Arruinar tu Aplicación
 
@@ -20,7 +18,7 @@ El **vibe coding** se ha vuelto increíblemente popular con el auge de herramien
 
 ## El Problema Fundamental
 
-Imagina que le pides a una IA: *"Crea una función que obtenga todos los usuarios de la base de datos"*. La IA te genera algo como esto:
+Imagina que le pides a una IA: _"Crea una función que obtenga todos los usuarios de la base de datos"_. La IA te genera algo como esto:
 
 ```javascript
 async function getAllUsers() {
@@ -36,6 +34,7 @@ Parece perfecto, ¿verdad? **Pero aquí está el problema**: ¿Qué pasa si tien
 ### 1. **Problemas de Rendimiento**
 
 Sin conocimientos de programación, no sabrás que cargar 100,000 registros de una vez:
+
 - Consumirá toda la memoria RAM de tu servidor
 - Hará que tu aplicación se congele
 - Podría causar que tu servidor se caiga completamente
@@ -47,7 +46,7 @@ async function getUsers(page = 1, limit = 50) {
   const skip = (page - 1) * limit;
   const users = await db.users.findMany({
     skip,
-    take: limit
+    take: limit,
   });
   return users;
 }
@@ -76,6 +75,7 @@ app.get('/user/:id', (req, res) => {
 ### 3. **Deuda Técnica Masiva**
 
 El código generado por IA sin supervisión tiende a:
+
 - Duplicar lógica innecesariamente
 - Ignorar patrones de diseño establecidos
 - Crear dependencias circulares
@@ -86,16 +86,19 @@ El código generado por IA sin supervisión tiende a:
 ### 1. **Para Hacer las Preguntas Correctas**
 
 Un programador experimentado sabe preguntar:
+
 - "¿Cómo implemento paginación eficiente?"
 - "¿Cómo valido y sanitizo esta entrada?"
 - "¿Cuál es la complejidad temporal de este algoritmo?"
 
 Un principiante pregunta:
+
 - "Dame código para obtener usuarios"
 
 ### 2. **Para Revisar y Optimizar**
 
 Necesitas entender:
+
 - **Complejidad algorítmica**: ¿Es O(n) o O(n²)?
 - **Gestión de memoria**: ¿Estamos creando memory leaks?
 - **Patrones de diseño**: ¿Esto viola SOLID?
@@ -104,6 +107,7 @@ Necesitas entender:
 ### 3. **Para Depurar Cuando Algo Falla**
 
 La IA no puede:
+
 - Depurar errores en producción
 - Entender el contexto completo de tu aplicación
 - Identificar race conditions
@@ -114,12 +118,14 @@ La IA no puede:
 ### ✅ Usa IA Como Herramienta, No Como Sustituto
 
 1. **Aprende los fundamentos primero**
+
    - Estructuras de datos
    - Algoritmos básicos
    - Patrones de diseño
    - Principios SOLID
 
 2. **Usa IA para acelerar, no para reemplazar**
+
    - Genera código boilerplate
    - Obtén sugerencias de implementación
    - Acelera tareas repetitivas
@@ -140,10 +146,10 @@ const posts = await db.post.findMany({
     author: true,
     comments: {
       include: {
-        author: true
-      }
-    }
-  }
+        author: true,
+      },
+    },
+  },
 });
 ```
 
@@ -158,12 +164,12 @@ const posts = await db.post.findMany({
   skip: (page - 1) * 20,
   include: {
     author: {
-      select: { id: true, name: true, avatar: true }
+      select: { id: true, name: true, avatar: true },
     },
     _count: {
-      select: { comments: true }
-    }
-  }
+      select: { comments: true },
+    },
+  },
 });
 
 // Cargar comentarios solo cuando se necesiten
@@ -179,6 +185,7 @@ El **vibe coding** es una herramienta poderosa, pero como cualquier herramienta,
 - ❌ No podrás escalar tu aplicación
 
 **La solución no es evitar la IA**, sino:
+
 - ✅ Aprender los fundamentos de programación
 - ✅ Usar IA como asistente, no como piloto automático
 - ✅ Revisar, entender y optimizar todo el código generado

@@ -21,7 +21,7 @@ const projectUrl = getRelativeLocaleUrl(lang, `/projects/${slug}`);
 
 <a
   href={projectUrl}
-  class="group relative block w-full h-80 md:h-96 rounded-lg overflow-hidden shadow-lg focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+  class="group relative block w-full h-80 md:h-96 rounded-lg overflow-hidden shadow-lg focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background featured-project-preview"
 >
   {
     imageUrl ? (
@@ -59,3 +59,81 @@ const projectUrl = getRelativeLocaleUrl(lang, `/projects/${slug}`);
     </div>
   </div>
 </a>
+
+<script is:inline>
+  const enhanceFeaturedProjectHover = () => {
+    const preview = document.querySelector('.featured-project-preview');
+    if (!preview || typeof gsap === 'undefined') return;
+
+    // Enhance the hover effect with GSAP
+    preview.addEventListener('mouseenter', () => {
+      gsap.to(preview, {
+        scale: 1.02,
+        duration: 0.4,
+        ease: 'power3.out',
+      });
+
+      // Animate the title
+      const title = preview.querySelector('h3');
+      if (title) {
+        gsap.to(title, {
+          y: -4,
+          duration: 0.3,
+          ease: 'power2.out',
+        });
+      }
+
+      // Animate the CTA button
+      const ctaDiv = preview.querySelector('.flex.items-center');
+      if (ctaDiv) {
+        gsap.to(ctaDiv, {
+          opacity: 1,
+          y: 0,
+          duration: 0.3,
+          ease: 'power2.out',
+        });
+      }
+    });
+
+    preview.addEventListener('mouseleave', () => {
+      gsap.to(preview, {
+        scale: 1,
+        duration: 0.4,
+        ease: 'power3.out',
+      });
+
+      // Reset title position
+      const title = preview.querySelector('h3');
+      if (title) {
+        gsap.to(title, {
+          y: 0,
+          duration: 0.3,
+          ease: 'power2.out',
+        });
+      }
+
+      // Reset CTA button
+      const ctaDiv = preview.querySelector('.flex.items-center');
+      if (ctaDiv) {
+        gsap.to(ctaDiv, {
+          opacity: 0.5,
+          y: 4,
+          duration: 0.3,
+          ease: 'power2.out',
+        });
+      }
+    });
+  };
+
+  // Run after component mounts
+  if (typeof document !== 'undefined') {
+    if (document.readyState === 'loading') {
+      document.addEventListener(
+        'DOMContentLoaded',
+        enhanceFeaturedProjectHover
+      );
+    } else {
+      enhanceFeaturedProjectHover();
+    }
+  }
+</script>

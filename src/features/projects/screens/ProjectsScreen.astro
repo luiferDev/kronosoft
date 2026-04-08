@@ -16,34 +16,34 @@ const projectsPageTranslations = t.projectsPage; // For easier access
 ---
 
 <div class="py-12 md:py-16">
-  <Heading title={projectsPageTranslations?.title ?? 'Projects'} />
+  <Heading
+    title={projectsPageTranslations?.title ?? 'Projects'}
+    className="projects-heading"
+  />
   {
     projects && projects.length > 0 ? (
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project: TranslatedProject) => {
-          const projectUrl = `${lang === 'es' ? '' : '/' + lang}/projects/${project.slug}`;
-          return (
-            <a
-              href={projectUrl}
-              aria-label={`View project ${project.title}`}
-              class="flex rounded-lg transition-shadow duration-200 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 projects-grid">
+        {projects.map((project: TranslatedProject, index: number) => (
+          <a
+            key={project.slug}
+            href={`${lang === 'es' ? '' : '/' + lang}/projects/${project.slug}`}
+            aria-label={`View project ${project.title}`}
+            class="flex rounded-lg transition-shadow duration-200 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 project-link"
+          >
+            <SectionCard
+              title={project.title}
+              categoryText={project.categoryText}
+              className="w-full"
+              classNameTitle="text-xl"
+              tags={project.tags ?? []}
+              imageUrl={project.imageUrl}
+              imageAltText={project.imageAltText}
+              className="project-card"
             >
-              <SectionCard
-                title={project.title}
-                categoryText={project.categoryText}
-                className="w-full"
-                classNameTitle="text-xl"
-                tags={project.tags ?? []}
-                imageUrl={project.imageUrl}
-                imageAltText={project.imageAltText}
-              >
-                <p class="text-sm text-muted-foreground">
-                  {project.description}
-                </p>
-              </SectionCard>
-            </a>
-          );
-        })}
+              <p class="text-sm text-muted-foreground">{project.description}</p>
+            </SectionCard>
+          </a>
+        ))}
       </div>
     ) : (
       <EmptyState
@@ -52,4 +52,65 @@ const projectsPageTranslations = t.projectsPage; // For easier access
       />
     )
   }
+
+  <script is:inline>
+    import { gsap } from 'gsap';
+
+    // Check reduced motion
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+
+    if (!prefersReducedMotion) {
+      // Animate section heading
+      gsap.fromTo(
+        '.projects-heading',
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }
+      );
+
+      // Stagger animation for project cards
+      gsap.utils.toArray('.project-card').forEach((card, i) => {
+        gsap.fromTo(
+          card,
+          { opacity: 0, y: 40, scale: 0.95 },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.6,
+            delay: i * 0.08,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: card,
+              start: 'top 85%',
+              toggleActions: 'play none none reverse',
+            },
+          }
+        );
+      });
+
+      // Add subtle hover enhancement to project links
+      gsap.utils.toArray('.project-link').forEach((link) => {
+        link.addEventListener('mouseenter', () => {
+          gsap.to(link, {
+            scale: 1.01,
+            duration: 0.2,
+            ease: 'power2.out',
+          });
+        });
+
+        link.addEventListener('mouseleave', () => {
+          gsap.to(link, {
+            scale: 1,
+            duration: 0.2,
+            ease: 'power2.out',
+          });
+        });
+      });
+    } else {
+      // Fallback for reduced motion
+      gsap.set(['.projects-heading, .project-card'], { opacity: 1, y: 0 });
+    }
+  </script>
 </div>

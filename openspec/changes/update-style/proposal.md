@@ -25,18 +25,21 @@ Rediseñar completamente la apariencia visual del portfolio Kronosoft hacia una 
 ## Approach
 
 1. **Colors**: Definir nueva paleta con:
+
    - Background oscuro principal (#0a0a0f)
    - Background secundario (#12121a)
    - Acentos neón: cyan (#00f0ff), magenta (#ff00aa), verde (#00ff88)
    - Mantener negro como base pero con profundidad
 
 2. **GSAP Integration**:
+
    - Animaciones de entrada (fade-in, slide-up)
    - Efectos hover en cards y botones
    - Scroll animations con ScrollTrigger
    - Transiciones suaves entre secciones
 
 3. **Components Update**:
+
    - Header con efecto glassmorphism
    - Footer enriquecido con más contenido
    - Cards con border neón sutil

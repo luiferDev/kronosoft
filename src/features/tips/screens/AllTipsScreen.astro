@@ -31,13 +31,13 @@ const regularTips = tips.filter((tip) => !tip.data.featured);
           {/* Featured Tips */}
           {featuredTips.length > 0 && (
             <section>
-              <h2 class="text-2xl font-semibold mb-6 flex items-center gap-2">
+              <h2 class="text-2xl font-semibold mb-6 flex items-center gap-2 featured-tips-heading">
                 <span class="text-2xl">⭐</span>
                 {t('featuredTips')}
               </h2>
               <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-2">
                 {featuredTips.map((tip) => (
-                  <TipCard tip={tip} lang={lang} />
+                  <TipCard tip={tip} lang={lang} className="tip-card" />
                 ))}
               </div>
             </section>
@@ -46,7 +46,9 @@ const regularTips = tips.filter((tip) => !tip.data.featured);
           {/* All Regular Tips */}
           <section>
             {regularTips.length > 0 && (
-              <h2 class="text-2xl font-semibold mb-6">{t('allTips')}</h2>
+              <h2 class="text-2xl font-semibold mb-6 all-tips-heading">
+                {t('allTips')}
+              </h2>
             )}
 
             {/* Responsive Grid */}
@@ -68,4 +70,56 @@ const regularTips = tips.filter((tip) => !tip.data.featured);
       )
     }
   </div>
+
+  <script is:inline>
+    import { gsap } from 'gsap';
+
+    // Check reduced motion
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+
+    if (!prefersReducedMotion) {
+      // Animate section headings
+      gsap.fromTo(
+        '.featured-tips-heading, .all-tips-heading',
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }
+      );
+
+      // Stagger animation for tip cards
+      gsap.utils.toArray('.tip-card').forEach((card, i) => {
+        gsap.fromTo(
+          card,
+          { opacity: 0, y: 40, scale: 0.95 },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.6,
+            delay: i * 0.05,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: card,
+              start: 'top 85%',
+              toggleActions: 'play none none reverse',
+            },
+          }
+        );
+      });
+
+      // Animate stats section
+      gsap.fromTo(
+        '.tips-stats',
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.6, delay: 0.3, ease: 'power3.out' }
+      );
+    } else {
+      // Fallback for reduced motion
+      gsap.set(
+        ['.featured-tips-heading, .all-tips-heading, .tip-card, .tips-stats'],
+        { opacity: 1, y: 0 }
+      );
+    }
+  </script>
 </BaseLayout>

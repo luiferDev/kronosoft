@@ -110,16 +110,24 @@ const IconComponent = iconComponents[iconName];
   className="skill-card flex flex-col h-full gap-3 pt-2 relative overflow-hidden group"
 >
   {/* Glow effect on hover */}
-  <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-  <div class="absolute -inset-px border border-transparent group-hover:border-primary/30 rounded-xl transition-colors duration-300" />
-  
+  <div
+    class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+  >
+  </div>
+  <div
+    class="absolute -inset-px border border-transparent group-hover:border-primary/30 rounded-xl transition-colors duration-300"
+  >
+  </div>
+
   <CardHeader className="pb-3 pt-4 relative">
     <div class="flex items-start">
       <div class="mr-4 flex-shrink-0">
         <span
           class="inline-flex items-center justify-center p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors duration-300"
         >
-          <IconComponent className="size-5 text-primary group-hover:text-glow-cyan transition-all duration-300" />
+          <IconComponent
+            className="size-5 text-primary group-hover:text-glow-cyan transition-all duration-300"
+          />
         </span>
       </div>
       <div class="flex-grow">
@@ -148,9 +156,7 @@ const IconComponent = iconComponents[iconName];
               class="inline-flex items-center transition-all duration-300 hover:scale-110"
               title={tech.name}
             >
-              <TechIcon
-                className="size-5 text-muted-foreground/60 hover:text-primary transition-colors cursor-pointer"
-              />
+              <TechIcon className="size-5 text-muted-foreground/60 hover:text-primary transition-colors cursor-pointer" />
             </span>
           ) : null;
         })}

@@ -1,16 +1,14 @@
 ---
-title: "Vibe Coding Without Programming Knowledge? Why It Could Ruin Your App"
+title: 'Vibe Coding Without Programming Knowledge? Why It Could Ruin Your App'
 description: "Discover why vibe coding without programming fundamentals can seriously compromise your application's performance and quality."
 pubDate: 2025-02-19
 heroImage:
-  url: "@/assets/placeholder.webp"
-  alt: "Confused developer in front of AI-generated code"
-tags: ["programming", "AI", "best-practices", "web-development"]
+  url: '@/assets/placeholder.webp'
+  alt: 'Confused developer in front of AI-generated code'
+tags: ['programming', 'AI', 'best-practices', 'web-development']
 relatedPosts: []
 isDraft: false
 ---
-
-
 
 # Vibe Coding Without Programming Knowledge? Why It Could Ruin Your App
 
@@ -20,7 +18,7 @@ isDraft: false
 
 ## The Fundamental Problem
 
-Imagine you ask an AI: *"Create a function that gets all users from the database"*. The AI generates something like this:
+Imagine you ask an AI: _"Create a function that gets all users from the database"_. The AI generates something like this:
 
 ```javascript
 async function getAllUsers() {
@@ -36,6 +34,7 @@ Looks perfect, right? **But here's the problem**: What if you have 100,000 users
 ### 1. **Performance Issues**
 
 Without programming knowledge, you won't know that loading 100,000 records at once:
+
 - Will consume all your server's RAM
 - Will freeze your application
 - Could cause your server to crash completely
@@ -47,7 +46,7 @@ async function getUsers(page = 1, limit = 50) {
   const skip = (page - 1) * limit;
   const users = await db.users.findMany({
     skip,
-    take: limit
+    take: limit,
   });
   return users;
 }
@@ -76,6 +75,7 @@ app.get('/user/:id', (req, res) => {
 ### 3. **Massive Technical Debt**
 
 AI-generated code without supervision tends to:
+
 - Duplicate logic unnecessarily
 - Ignore established design patterns
 - Create circular dependencies
@@ -86,16 +86,19 @@ AI-generated code without supervision tends to:
 ### 1. **To Ask the Right Questions**
 
 An experienced programmer knows to ask:
+
 - "How do I implement efficient pagination?"
 - "How do I validate and sanitize this input?"
 - "What's the time complexity of this algorithm?"
 
 A beginner asks:
+
 - "Give me code to get users"
 
 ### 2. **To Review and Optimize**
 
 You need to understand:
+
 - **Algorithmic complexity**: Is it O(n) or O(n²)?
 - **Memory management**: Are we creating memory leaks?
 - **Design patterns**: Does this violate SOLID?
@@ -104,6 +107,7 @@ You need to understand:
 ### 3. **To Debug When Something Fails**
 
 AI cannot:
+
 - Debug production errors
 - Understand the full context of your application
 - Identify race conditions
@@ -114,12 +118,14 @@ AI cannot:
 ### ✅ Use AI as a Tool, Not a Substitute
 
 1. **Learn the fundamentals first**
+
    - Data structures
    - Basic algorithms
    - Design patterns
    - SOLID principles
 
 2. **Use AI to accelerate, not replace**
+
    - Generate boilerplate code
    - Get implementation suggestions
    - Speed up repetitive tasks
@@ -140,10 +146,10 @@ const posts = await db.post.findMany({
     author: true,
     comments: {
       include: {
-        author: true
-      }
-    }
-  }
+        author: true,
+      },
+    },
+  },
 });
 ```
 
@@ -158,12 +164,12 @@ const posts = await db.post.findMany({
   skip: (page - 1) * 20,
   include: {
     author: {
-      select: { id: true, name: true, avatar: true }
+      select: { id: true, name: true, avatar: true },
     },
     _count: {
-      select: { comments: true }
-    }
-  }
+      select: { comments: true },
+    },
+  },
 });
 
 // Load comments only when needed
@@ -179,6 +185,7 @@ const posts = await db.post.findMany({
 - ❌ You won't be able to scale your application
 
 **The solution is not to avoid AI**, but to:
+
 - ✅ Learn programming fundamentals
 - ✅ Use AI as an assistant, not autopilot
 - ✅ Review, understand, and optimize all generated code
