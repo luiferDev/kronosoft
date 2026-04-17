@@ -70,7 +70,7 @@
   --color-glass-dark: var(--glass-dark);
 
   /* Typography */
-  --font-sans: 'Luxomona', 'Roboto', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Luxomona', ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, monospace;
   --font-serif: ui-serif, serif;
 

@@ -4,6 +4,12 @@ import placeholderImage from '@/assets/placeholder.webp';
 import zorvanz from '@/assets/zorvanz-hero.webp';
 import ambualert from '@/assets/ambualer-hero.png';
 import codigo from '@/assets/codigo-hero.png';
+import zorvanzProducts from '@/assets/zorvanz-products.webp'
+import zorvanzRegister from '@/assets/zorvanz-register.webp'
+import zorvanzCart from '@/assets/zorvanz-cart.webp'
+import zorvanzCalc from '@/assets/zorvanz-calc.webp'
+import ambuEmergency from '@/assets/ambu-emergengy.webp'
+
 import type {
   ProjectData,
   SkillData,
@@ -24,11 +30,19 @@ const projectsListUnsorted: Array<ProjectData> = [
     galleryImages: [
       {
         id: 'zorvanzGallery1',
-        src: placeholderImage,
+        src: zorvanzProducts,
       },
       {
         id: 'zorvanzGallery2',
-        src: placeholderImage,
+        src: zorvanzRegister,
+      },
+      {
+        id: 'zorvanzGallery3',
+        src: zorvanzCart
+      },
+      {
+        id: 'zorvanzGallery4',
+        src: zorvanzCalc
       },
     ],
     keyFeatures: [{ id: 'responsiveDesign' }, { id: 'contentManagement' }],
@@ -50,11 +64,7 @@ const projectsListUnsorted: Array<ProjectData> = [
     galleryImages: [
       {
         id: 'ambualertGallery1',
-        src: placeholderImage,
-      },
-      {
-        id: 'ambualertGallery2',
-        src: placeholderImage,
+        src: ambuEmergency,
       },
     ],
     keyFeatures: [{ id: 'paymentIntegration' }, { id: 'inventoryManagement' }],

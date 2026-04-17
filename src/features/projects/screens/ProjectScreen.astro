@@ -100,7 +100,7 @@ const { project, t, lang } = Astro.props;
     {
       project.galleryImagesTranslated &&
         project.galleryImagesTranslated.length > 0 && (
-          <ProjectGallery
+      <ProjectGallery
             client:visible
             images={project.galleryImagesTranslated.map((image) => ({
               src: image.src.src,

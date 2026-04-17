@@ -63,7 +63,7 @@ const {
     {/* Hero Text Column */}
     <div class="text-center md:text-left">
       <h1
-        class="hero-title text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 relative"
+        class="hero-title text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 relative font-sans"
       >
         <span class="relative">
           {heroGreeting}
@@ -153,7 +153,7 @@ const {
   <Heading
     title={featuredProjectsTitle}
     description={featuredProjectsDescription}
-    className="flex flex-col items-center"
+    className="flex flex-col items-center font-sans"
   />
 
   <div
@@ -347,5 +347,10 @@ const {
 
   .stagger-card {
     opacity: 0; /* Initial state for GSAP */
+  }
+
+  /* Hero title font */
+  .hero-title {
+    font-family: 'Luxomona', sans-serif !important;
   }
 </style>

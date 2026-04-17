@@ -102,7 +102,7 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
   }, []);
 
   return (
-    <div className="relative max-w-3xl mx-auto" ref={galleryRef}>
+    <div className="relative max-w-5xl mx-auto" ref={galleryRef}>
       <Carousel
         className="w-full md:ml-12"
         opts={{
@@ -116,11 +116,11 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
               <div>
                 <Card>
                   <CardContent className="p-2">
-                    <AspectRatio ratio={16 / 9} className="h-full w-full">
+                    <AspectRatio ratio={16 / 9} className="h-fit w-fit content-center items-center">
                       <img
                         src={image.src}
                         alt={image.alt}
-                        className="h-full w-full rounded-md object-cover"
+                        className="h-full w-full content-center items-center rounded-md object-cover"
                         width={400}
                         height={225}
                       />
